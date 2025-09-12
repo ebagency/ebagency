@@ -1,19 +1,15 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Button, CountUp } from '@/components';
+import { CountUp } from '@/components';
 import {
   FiEdit,
   FiMonitor,
   FiTarget,
-  FiUsers,
-  FiTrendingUp,
   FiGlobe,
   FiCamera,
   FiEdit3,
   FiBarChart,
-  FiZap,
-  FiShield,
-  FiAward
+  FiZap
 } from 'react-icons/fi';
 import Link from 'next/link';
 

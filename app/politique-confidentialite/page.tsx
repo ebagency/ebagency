@@ -39,7 +39,7 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Introduction</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  EB Agency s'engage à protéger votre vie privée et vos données personnelles. 
+                  EB Agency s&apos;engage à protéger votre vie privée et vos données personnelles. 
                   Cette politique de confidentialité explique comment nous collectons, utilisons, 
                   stockons et protégeons vos informations personnelles conformément au Règlement 
                   Général sur la Protection des Données (RGPD) et à la loi française.
@@ -76,17 +76,17 @@ export default function PolitiqueConfidentialitePage() {
               <div className="bg-light p-6 rounded-2xl">
                 <h3 className="text-lg font-semibold text-primary mb-4">Données collectées directement</h3>
                 <ul className="text-dark/80 mb-6 space-y-2">
-                  <li>• <strong>Données d'identification :</strong> nom, prénom, adresse email, numéro de téléphone</li>
-                  <li>• <strong>Données professionnelles :</strong> entreprise, fonction, secteur d'activité</li>
+                  <li>• <strong>Données d&apos;identification :</strong> nom, prénom, adresse email, numéro de téléphone</li>
+                  <li>• <strong>Données professionnelles :</strong> entreprise, fonction, secteur d&apos;activité</li>
                   <li>• <strong>Données de contact :</strong> adresse postale, préférences de communication</li>
                   <li>• <strong>Données de navigation :</strong> pages visitées, durée de visite, source de trafic</li>
                 </ul>
                 
                 <h3 className="text-lg font-semibold text-primary mb-4">Données collectées automatiquement</h3>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Données techniques :</strong> adresse IP, type de navigateur, système d'exploitation</li>
+                  <li>• <strong>Données techniques :</strong> adresse IP, type de navigateur, système d&apos;exploitation</li>
                   <li>• <strong>Cookies :</strong> cookies de session, cookies analytiques, cookies de préférences</li>
-                  <li>• <strong>Données d'usage :</strong> interactions avec le site, clics, temps passé sur les pages</li>
+                  <li>• <strong>Données d&apos;usage :</strong> interactions avec le site, clics, temps passé sur les pages</li>
                 </ul>
               </div>
             </div>
@@ -97,12 +97,12 @@ export default function PolitiqueConfidentialitePage() {
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">Nous utilisons vos données personnelles pour :</p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Gestion des demandes :</strong> répondre à vos questions et demandes d'information</li>
+                  <li>• <strong>Gestion des demandes :</strong> répondre à vos questions et demandes d&apos;information</li>
                   <li>• <strong>Prestations de services :</strong> fournir nos services de communication et design</li>
                   <li>• <strong>Communication commerciale :</strong> vous envoyer des informations sur nos services (avec votre consentement)</li>
-                  <li>• <strong>Amélioration du site :</strong> analyser l'utilisation du site pour l'améliorer</li>
+                  <li>• <strong>Amélioration du site :</strong> analyser l&apos;utilisation du site pour l&apos;améliorer</li>
                   <li>• <strong>Obligations légales :</strong> respecter nos obligations légales et réglementaires</li>
-                  <li>• <strong>Gestion des litiges :</strong> résoudre d'éventuels litiges</li>
+                  <li>• <strong>Gestion des litiges :</strong> résoudre d&apos;éventuels litiges</li>
                 </ul>
               </div>
             </div>
@@ -112,9 +112,9 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Base légale du traitement</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Consentement :</strong> pour l'envoi de communications marketing</li>
+                  <li>• <strong>Consentement :</strong> pour l&apos;envoi de communications marketing</li>
                   <li>• <strong>Exécution du contrat :</strong> pour la fourniture de nos services</li>
-                  <li>• <strong>Intérêt légitime :</strong> pour l'amélioration de notre site et services</li>
+                  <li>• <strong>Intérêt légitime :</strong> pour l&apos;amélioration de notre site et services</li>
                   <li>• <strong>Obligation légale :</strong> pour respecter nos obligations comptables et fiscales</li>
                 </ul>
               </div>
@@ -144,7 +144,7 @@ export default function PolitiqueConfidentialitePage() {
                 </p>
                 <ul className="text-dark/80 space-y-2">
                   <li>• <strong>Prestataires de services :</strong> hébergement, maintenance, analytics (sous contrat de confidentialité)</li>
-                  <li>• <strong>Obligations légales :</strong> autorités compétentes en cas d'obligation légale</li>
+                  <li>• <strong>Obligations légales :</strong> autorités compétentes en cas d&apos;obligation légale</li>
                   <li>• <strong>Protection de nos droits :</strong> en cas de litige ou de protection de nos droits légitimes</li>
                 </ul>
               </div>
@@ -156,12 +156,12 @@ export default function PolitiqueConfidentialitePage() {
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">Conformément au RGPD, vous disposez des droits suivants :</p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Droit d'accès :</strong> obtenir une copie de vos données personnelles</li>
+                  <li>• <strong>Droit d&apos;accès :</strong> obtenir une copie de vos données personnelles</li>
                   <li>• <strong>Droit de rectification :</strong> corriger des données inexactes ou incomplètes</li>
-                  <li>• <strong>Droit à l'effacement :</strong> demander la suppression de vos données</li>
+                  <li>• <strong>Droit à l&apos;effacement :</strong> demander la suppression de vos données</li>
                   <li>• <strong>Droit à la limitation :</strong> limiter le traitement de vos données</li>
                   <li>• <strong>Droit à la portabilité :</strong> récupérer vos données dans un format structuré</li>
-                  <li>• <strong>Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
+                  <li>• <strong>Droit d&apos;opposition :</strong> vous opposer au traitement de vos données</li>
                   <li>• <strong>Droit de retrait du consentement :</strong> retirer votre consentement à tout moment</li>
                 </ul>
                 <p className="text-dark/80 mt-4">
@@ -180,7 +180,7 @@ export default function PolitiqueConfidentialitePage() {
                 <h3 className="text-lg font-semibold text-primary mb-4">Types de cookies utilisés :</h3>
                 <ul className="text-dark/80 space-y-2">
                   <li>• <strong>Cookies essentiels :</strong> nécessaires au fonctionnement du site</li>
-                  <li>• <strong>Cookies analytiques :</strong> pour mesurer l'audience et l'utilisation du site</li>
+                  <li>• <strong>Cookies analytiques :</strong> pour mesurer l&apos;audience et l&apos;utilisation du site</li>
                   <li>• <strong>Cookies de préférences :</strong> pour mémoriser vos choix et préférences</li>
                   <li>• <strong>Cookies marketing :</strong> pour personnaliser les publicités (avec votre consentement)</li>
                 </ul>
@@ -200,13 +200,13 @@ export default function PolitiqueConfidentialitePage() {
                   pour protéger vos données personnelles contre :
                 </p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• L'accès non autorisé</li>
+                  <li>• L&apos;accès non autorisé</li>
                   <li>• La divulgation non autorisée</li>
                   <li>• La modification non autorisée</li>
                   <li>• La destruction non autorisée</li>
                 </ul>
                 <p className="text-dark/80 mt-4">
-                  Ces mesures incluent le chiffrement des données, l'authentification forte, 
+                  Ces mesures incluent le chiffrement des données, l&apos;authentification forte, 
                   la formation du personnel et des audits de sécurité réguliers.
                 </p>
               </div>
@@ -217,11 +217,11 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Transferts internationaux</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Certains de nos prestataires peuvent être situés en dehors de l'Union Européenne. 
+                  Certains de nos prestataires peuvent être situés en dehors de l&apos;Union Européenne. 
                   Dans ce cas, nous nous assurons que des garanties appropriées sont en place :
                 </p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• Décision d'adéquation de la Commission européenne</li>
+                  <li>• Décision d&apos;adéquation de la Commission européenne</li>
                   <li>• Clauses contractuelles types approuvées par la Commission</li>
                   <li>• Certifications ou codes de conduite approuvés</li>
                 </ul>

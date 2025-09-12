@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, DM_Serif_Display } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar, Footer } from "@/components";
 

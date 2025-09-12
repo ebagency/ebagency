@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Button, CountUp } from '@/components';
-import { FiUsers, FiTarget, FiHeart, FiShield, FiZap, FiStar, FiCheckCircle, FiCalendar } from 'react-icons/fi';
+import { CountUp } from '@/components';
+import { FiUsers, FiTarget, FiHeart, FiShield, FiZap, FiStar } from 'react-icons/fi';
 import Link from 'next/link';
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 // server directive non nécessaire
 
 import Image from 'next/image';
-import { Button, Header, CountUp } from '@/components';
+import { Header, CountUp } from '@/components';
 import { OrganizationStructuredData, LocalBusinessStructuredData } from '@/components/seo';
 import Link from 'next/link';
 
