@@ -1,0 +1,261 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { Button, CountUp } from '@/components';
+import { FiUsers, FiTarget, FiHeart, FiShield, FiZap, FiStar, FiCheckCircle, FiCalendar } from 'react-icons/fi';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Qui Sommes-Nous - EB Agency',
+  description: 'Découvrez l\'histoire, les valeurs et l\'équipe d\'EB Agency, votre partenaire de confiance en communication de luxe depuis plus de 15 ans.',
+  alternates: { canonical: '/qui-sommes-nous' },
+  openGraph: {
+    title: 'À Propos d\'EB Agency - Communication de Luxe',
+    description: 'Notre histoire, nos valeurs et notre engagement envers l\'excellence',
+    type: 'website',
+    url: '/qui-sommes-nous'
+  }
+};
+
+const teamMembers = [
+  {
+    name: 'Boubacar',
+    role: 'CEO et Fondateur (Agent Immobilier)',
+    image: '/elements/team/team_1.png',
+    description: 'Expert en immobilier de luxe avec une vision stratégique pour le développement de l\'agence.',
+    expertise: ['Direction Générale', 'Immobilier de Luxe', 'Stratégie']
+  },
+  {
+    name: 'Émile',
+    role: 'CEO et Fondateur (Agent Immobilier)',
+    image: '/elements/team/team_2.png',
+    description: 'Co-fondateur spécialisé dans l\'immobilier haut de gamme et le développement commercial.',
+    expertise: ['Direction Générale', 'Immobilier de Luxe', 'Développement Commercial']
+  },
+  {
+    name: 'Hamida',
+    role: 'Co-Fondatrice (Community Manager et Agent Immobilier)',
+    image: '/elements/team/team_3.png',
+    description: 'Spécialiste de la communication digitale et de la gestion communautaire pour l\'immobilier.',
+    expertise: ['Community Management', 'Immobilier', 'Communication Digitale']
+  },
+  {
+    name: 'Wided',
+    role: 'Directrice des Opérations et Marketing',
+    image: '/elements/team/team_4.png',
+    description: 'Experte en opérations et marketing, optimise les processus et développe la visibilité de l\'agence.',
+    expertise: ['Opérations', 'Marketing', 'Optimisation']
+  }
+];
+
+const values = [
+  { icon: FiStar, title: 'Excellence', description: 'Nous visons l\'excellence dans chaque détail, chaque projet, chaque interaction.' },
+  { icon: FiHeart, title: 'Passion', description: 'Notre passion pour la créativité et le luxe se reflète dans chaque création.' },
+  { icon: FiShield, title: 'Intégrité', description: 'Nous privilégions la transparence, l\'honnêteté et l\'éthique dans toutes nos relations.' },
+  { icon: FiZap, title: 'Innovation', description: 'Nous restons constamment à la pointe des tendances et technologies.' },
+  { icon: FiUsers, title: 'Collaboration', description: 'Nous croyons en la force du travail d\'équipe et de la collaboration.' },
+  { icon: FiTarget, title: 'Résultats', description: 'Notre succès se mesure à celui de nos clients et à l\'impact de nos créations.' }
+];
+
+const milestones = [
+  { year: '2008', title: 'Fondation d\'EB Agency', description: 'Émilie Bernard fonde EB Agency avec la vision de créer une agence de communication dédiée au luxe.' },
+  { year: '2012', title: 'Premier Grand Client', description: 'Signature de notre premier contrat avec une maison de luxe internationale.' },
+  { year: '2016', title: 'Expansion de l\'Équipe', description: 'Croissance de l\'équipe et ouverture de nouveaux services : développement web et marketing digital.' },
+  { year: '2020', title: 'Transformation Digitale', description: 'Adaptation réussie aux nouveaux enjeux digitaux et lancement de nos services e-commerce de luxe.' },
+  { year: '2023', title: 'Reconnaissance Internationale', description: 'Obtention de plusieurs prix internationaux et expansion de notre clientèle à l\'international.' }
+];
+
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 bg-gradient-to-br from-light via-white to-accent/20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-dm-serif text-primary mb-6 font-semibold">
+                Qui Sommes-Nous ?
+                <span className="block text-secondary">Notre Histoire</span>
+              </h1>
+              <p className="text-lg md:text-xl text-dark/80 leading-relaxed mb-8">
+                Depuis plus de 15 ans, EB Agency s&apos;impose comme une référence dans le domaine
+                de la communication de luxe. Notre passion pour l&apos;excellence et notre expertise
+                reconnue nous permettent de créer des expériences de marque exceptionnelles.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="#" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
+                  DÉCOUVRIR NOTRE ÉQUIPE
+                </Link>
+                <Link href="#" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
+                  NOS RÉFÉRENCES
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-secondary rounded-3xl transform rotate-3"></div>
+              <div className="relative bg-white p-8 rounded-3xl shadow-2xl">
+                <div className="aspect-video bg-gradient-to-br from-accent to-light rounded-2xl overflow-hidden">
+                  <Image
+                    src="/elements/villa-1.webp"
+                    alt="Équipe EB Agency"
+                    fill
+                    className="object-cover rounded-3xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 md:py-20 bg-dark">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+            <div className="text-white">
+              <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
+                <CountUp end={150} suffix="+" />
+              </div>
+              <div className="text-text-light text-xs md:text-sm">PROJETS RÉALISÉS</div>
+            </div>
+            <div className="text-white">
+              <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
+                <CountUp end={98} suffix="%" />
+              </div>
+              <div className="text-text-light text-xs md:text-sm">CLIENTS SATISFAITS</div>
+            </div>
+            <div className="text-white">
+              <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
+                <CountUp end={15} suffix="+" />
+              </div>
+              <div className="text-text-light text-xs md:text-sm">ANNÉES D&apos;EXPÉRIENCE</div>
+            </div>
+            <div className="text-white">
+              <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
+                <CountUp end={24} suffix="/7" />
+              </div>
+              <div className="text-text-light text-xs md:text-sm">SUPPORT CLIENT</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-20 bg-light">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
+              Notre Histoire
+            </h2>
+            <p className="text-lg text-dark/80 leading-relaxed">
+              Fondée en 2008 par Émilie Bernard, EB Agency est née d&apos;une vision : créer une agence
+              de communication qui place l&apos;excellence et la créativité au cœur de chaque projet.
+              Aujourd&apos;hui, nous sommes fiers d&apos;accompagner les plus grandes marques de luxe dans
+              leur communication.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {milestones.map((milestone, index) => (
+              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover-lift transition-all">
+                <div className="text-3xl font-dm-serif text-primary mb-3">{milestone.year}</div>
+                <h3 className="text-xl font-semibold text-primary mb-3">{milestone.title}</h3>
+                <p className="text-dark/70 leading-relaxed">{milestone.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
+              Nos Valeurs
+            </h2>
+            <p className="text-lg text-dark/80 max-w-2xl mx-auto">
+              Ces valeurs fondamentales guident notre travail quotidien et définissent
+              notre approche unique de la communication de luxe.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-dm-serif text-primary mb-3">{value.title}</h3>
+                <p className="text-dark/70 leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-20 bg-light">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
+              Notre Équipe
+            </h2>
+            <p className="text-lg text-dark/80 max-w-2xl mx-auto">
+              Une équipe de professionnels passionnés, experts dans leur domaine,
+              unis par la même vision de l&apos;excellence et du service client.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover-lift transition-all overflow-hidden">
+                <div className="relative h-64">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-dm-serif text-primary mb-2">{member.name}</h3>
+                  <p className="text-secondary font-medium mb-3">{member.role}</p>
+                  <p className="text-dark/70 text-sm mb-4 leading-relaxed">{member.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {member.expertise.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-dm-serif text-white mb-6">
+            Rejoignez Nos Clients Satisfaits
+          </h2>
+          <p className="text-text-light text-lg mb-8 max-w-2xl mx-auto">
+            Découvrez comment notre expertise et notre passion peuvent transformer
+            votre vision en réalité et élever votre marque vers de nouveaux sommets.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
+              DÉMARRER UN PROJET
+            </Link>
+            <Link href="/contact" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
+              PRENDRE RENDEZ-VOUS
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

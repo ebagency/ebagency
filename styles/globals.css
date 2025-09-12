@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+/* Variables CSS personnalisées */
+:root {
+  --primary: #5D4940;
+  --primary-dark: #4B3B34;
+  --secondary: #5D4940;
+  --accent: #5D4940;
+  --light: #F8F8F8;
+  --dark: #1A1A1A;
+  --text-dark: #2D1810;
+  --text-light: #F5F5DC;
+  --background-light: #F8F8F8;
+  --background-dark: #1A1A1A;
+}
+
+
+/* Styles de base */
+@theme inline {
+  --color-primary: #5D4940;
+  --color-primary-dark: #4B3B34;
+  --color-accent: #5D4940;
+  --color-text-dark: #2D1810;
+  --color-text-light: #F5F5DC;
+  --color-background-light: #F8F8F8;
+  --color-secondary: #5D4940;
+  --color-background-dark: #1A1A1A;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Animations personnalisées */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes growInY {
+  0% {
+    transform: scaleY(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Classes d'animation */
+.animate-slide-in-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-grow-in {
+  transform-origin: top right;
+  animation: growInY 0.45s ease-out forwards;
+}
+
+/* Effet de survol pour les cartes */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+}
+
+/* Styles pour le menu mobile */
+.mobile-menu-overlay {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8) !important; /* Force le background */
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 70 !important;
+}
+
+.mobile-menu-slide {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.85) 100%) !important;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 320px !important;
+  height: 100% !important;
+  z-index: 80 !important;
+}
+
+/* Animation des éléments du menu mobile */
+.mobile-menu-item {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInFromRight 0.3s ease-out forwards;
+}
+
+.mobile-menu-item:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-item:nth-child(2) { animation-delay: 0.2s; }
+.mobile-menu-item:nth-child(3) { animation-delay: 0.3s; }
+.mobile-menu-item:nth-child(4) { animation-delay: 0.4s; }
+.mobile-menu-item:nth-child(5) { animation-delay: 0.5s; }
+.mobile-menu-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Styles pour la navbar au scroll */
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation du burger menu */
+.burger-line {
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-line.active:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-line.active:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Styles pour le header responsive */
+.header-content-mobile {
+  display: block;
+}
+
+.header-content-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-content-mobile {
+    display: none;
+  }
+  
+  .header-content-desktop {
+    display: block;
+  }
+}
+
+/* Styles pour les icônes sociales */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Styles pour les boutons CTA responsive */
+.cta-button-mobile {
+  width: 100%;
+  max-width: 200px;
+}
+
+.cta-button-desktop {
+  width: auto;
+}
+
+/* Styles pour Swiper */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary);
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* Amélioration du contraste et des couleurs */
+.bg-light {
+  background-color: var(--background-light) !important;
+}
+
+.bg-dark {
+  background-color: var(--background-dark) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.text-text-light {
+  color: var(--text-light) !important;
+}
+
+/* Amélioration du contraste pour mobile */
+@media (max-width: 768px) {
+  .bg-light {
+    background-color: var(--background-light) !important;
+  }
+  
+  .text-dark\/70 {
+    color: rgba(45, 24, 16, 0.7) !important;
+  }
+}
+
+/* Styles pour le logo du header */
+.logo-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-container:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.logo-image {
+  height: 75px;
+  width: 50px;
+  object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-container:hover .logo-image {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .logo-image {
+    height: 100px;
+    width: 95px;
+  }
+}
+
+/* (Supprimé) Surcharges utilitaires qui entraient en conflit avec Tailwind responsive */
