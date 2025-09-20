@@ -6,7 +6,6 @@ import {
   FiClock,
   FiSend,
   FiUser,
-  FiHome,
   FiMessageSquare,
   FiCheckCircle
 } from 'react-icons/fi';

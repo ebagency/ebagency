@@ -194,7 +194,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center text-sm text-dark/80">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                  Réseau d'acheteurs
+                  Réseau d&apos;acheteurs
                 </li>
                 <li className="flex items-center text-sm text-dark/80">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
@@ -202,7 +202,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center text-sm text-dark/80">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                  Suivi jusqu'à l'acte
+                  Suivi jusqu&apos;à l&apos;acte
                 </li>
               </ul>
             </div>
@@ -274,8 +274,8 @@ export default function Home() {
             <div className="space-y-4 md:space-y-6 order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-dm-serif text-primary font-semibold">QUI SOMMES-NOUS ?</h2>
               <p className="text-base md:text-lg text-dark/80 leading-relaxed">
-                EB Agency, c'est une équipe passionnée qui accompagne chaque client comme un partenaire de confiance.
-                À l'écoute de vos besoins, nous vous accompagnons pas à pas pour transformer vos envies en réalité, avec attention et confiance.
+                EB Agency, c&apos;est une équipe passionnée qui accompagne chaque client comme un partenaire de confiance.
+                À l&apos;écoute de vos besoins, nous vous accompagnons pas à pas pour transformer vos envies en réalité, avec attention et confiance.
               </p>
 
               <div className="space-y-3 md:space-y-4">
@@ -316,7 +316,7 @@ export default function Home() {
       <section id="portfolio" className="py-16 md:py-20 bg-light">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-4 font-semibold">LES NOUVEAUTÉS DE L'AGENCE</h2>
+            <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-4 font-semibold">LES NOUVEAUTÉS DE L&apos;AGENCE</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

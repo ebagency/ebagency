@@ -5,7 +5,6 @@ import {
   FiEdit,
   FiMonitor,
   FiTarget,
-  FiGlobe,
   FiCamera,
   FiEdit3,
   FiBarChart,
