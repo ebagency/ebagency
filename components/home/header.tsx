@@ -24,31 +24,31 @@ export function Header() {
       src: '/backgrounds/header-1.jpg',
       srcMobile: '/backgrounds/header-1.jpg', // Même image mais optimisée pour mobile
       alt: 'Header background 1',
-      title: 'LE MEILLEUR HÔTEL DE LUXE EN CALIFORNIE',
-      titleMobile: 'HÔTEL DE LUXE EN CALIFORNIE',
-      subtitle: 'HÔTEL ET RÉSORT DE LUXE',
-      subtitleMobile: 'RÉSORT DE LUXE',
-      span: 'ROYELLA'
+      title: 'L\'AGENCE IMMOBILIÈRE D\'EXCEPTION',
+      titleMobile: 'L\'AGENCE IMMOBILIÈRE D\'EXCEPTION',
+      subtitle: 'Agence Immobilière',
+      subtitleMobile: 'Agence Immobilière',
+      span: 'EB AGENCY'
     },
     {
       src: '/backgrounds/wallpaperflare.com_wallpaper.jpg',
       srcMobile: '/backgrounds/wallpaperflare.com_wallpaper.jpg',
       alt: 'Header background 2',
-      title: 'EXCELLENCE & INNOVATION',
-      titleMobile: 'EXCELLENCE & INNOVATION',
-      subtitle: 'Design de Prestige',
-      subtitleMobile: 'Design de Prestige',
+      title: 'VOTRE PARTENAIRE IMMOBILIER',
+      titleMobile: 'VOTRE PARTENAIRE IMMOBILIER',
+      subtitle: 'Agence Immobilière',
+      subtitleMobile: 'Agence Immobilière',
       span: 'EB AGENCY'
     },
     {
       src: '/backgrounds/Best-HD-Backgrounds-Photos-Download.jpg',
       srcMobile: '/backgrounds/Best-HD-Backgrounds-Photos-Download.jpg',
       alt: 'Header background 3',
-      title: 'BRANDING & IDENTITY',
-      titleMobile: 'BRANDING & IDENTITY',
-      subtitle: 'Communication de Luxe',
-      subtitleMobile: 'Communication de Luxe',
-      span: 'CREATIVE'
+      title: 'RÉUSSIR VOTRE PROJET SIMPLEMENT',
+      titleMobile: 'RÉUSSIR VOTRE PROJET SIMPLEMENT',
+      subtitle: 'Agence Immobilière',
+      subtitleMobile: 'Agence Immobilière',
+      span: 'EB AGENCY'
     }
   ];
 
@@ -60,7 +60,7 @@ export function Header() {
           <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
-          <span className="font-montserrat text-sm font-medium">+33 1 23 45 67 89</span>
+          <span className="font-montserrat text-sm font-medium">07 78 79 18 25</span>
         </div>
       </div>
 
@@ -129,20 +129,15 @@ export function Header() {
                   
                   {/* Boutons CTA - plus petits, espacés et de même largeur */}
                   <div className="pt-2 md:pt-4 flex flex-col sm:flex-row gap-3 justify-center items-center">
-                    <Button 
-                      variant="primary" 
-                      size="sm" 
-                      className={cn('w-32 md:w-36', 'cta-button-mobile')}
-                    >
-                      RÉSERVER
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className={cn('w-32 md:w-36 text-white!', 'cta-button-mobile')}
-                    >
-                      EN SAVOIR +
-                    </Button>
+                    <Link href="/biens">
+                      <Button 
+                        variant="primary" 
+                        size="sm" 
+                        className={cn('w-32 md:w-36', 'cta-button-mobile')}
+                      >
+                        NOS BIENS
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

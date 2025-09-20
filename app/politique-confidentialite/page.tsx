@@ -61,7 +61,7 @@ export default function PolitiqueConfidentialitePage() {
                   RCS Paris B 123 456 789<br />
                   Siège social : 123 Avenue des Champs-Élysées, 75008 Paris, France<br />
                   Email : contact@ebagency.com<br />
-                  Téléphone : +33 1 23 45 67 89
+                  Téléphone : 07 78 79 18 25
                 </p>
                 <p className="text-dark/80">
                   <strong>Délégué à la Protection des Données (DPO) :</strong><br />
@@ -266,7 +266,7 @@ export default function PolitiqueConfidentialitePage() {
                 </p>
                 <p className="text-dark/80">
                   <strong>Email :</strong> dpo@ebagency.com<br />
-                  <strong>Téléphone :</strong> +33 1 23 45 67 89<br />
+                  <strong>Téléphone :</strong> 07 78 79 18 25<br />
                   <strong>Adresse :</strong> 123 Avenue des Champs-Élysées, 75008 Paris, France
                 </p>
               </div>

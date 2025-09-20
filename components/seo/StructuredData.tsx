@@ -117,7 +117,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           name: 'EB Agency',
           description: 'Agence de communication de luxe spécialisée dans le design, branding et marketing premium',
           url: baseUrl,
-          telephone: '+33 1 23 45 67 89',
+          telephone: '07 78 79 18 25',
           email: 'contact@ebagency.com',
           address: {
             '@type': 'PostalAddress',
@@ -178,7 +178,7 @@ export function OrganizationStructuredData() {
       addressCountry: 'FR'
     },
     contactPoint: {
-      telephone: '+33 1 23 45 67 89',
+      telephone: '07 78 79 18 25',
       contactType: 'customer service',
       email: 'contact@ebagency.com'
     },

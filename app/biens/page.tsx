@@ -108,7 +108,7 @@ export default async function BiensPage({ searchParams }: { searchParams: Promis
       <section className="px-4 md:px-8 max-w-7xl mx-auto text-dark">
         <header className="mb-8">
           <h1 className="text-3xl md:text-5xl font-dm-serif text-primary">Nos biens immobiliers</h1>
-          <p className="mt-2 text-dark/70">À vendre et à louer — Côte d&apos;Azur et alentours</p>
+          <p className="mt-2 text-dark/70">À vendre et à louer</p>
         </header>
 
         <Filters

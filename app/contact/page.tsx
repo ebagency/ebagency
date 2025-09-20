@@ -104,13 +104,8 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-dm-serif text-primary leading-tight mb-4 sm:mb-6 md:mb-8 font-bold">
-              Contactez
-              <span className="block text-secondary">Notre Équipe</span>
+              Contactez notre équipe
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-dark leading-relaxed max-w-3xl mx-auto font-semibold px-2 sm:px-4">
-              Prêt à transformer votre vision en réalité ? Discutons de votre projet 
-              et créons ensemble quelque chose d&apos;extraordinaire.
-            </p>
           </div>
         </div>
       </section>
@@ -124,18 +119,18 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
       )}
 
       {/* Contact Information */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+      <section className="pb-8 sm:pb-12 md:pb-16 lg:pb-20">
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
             <ContactCard
               icon={FiPhone}
               title="Téléphone"
-              content="+33 1 23 45 67 89"
+              content="0778791825"
             />
             <ContactCard
               icon={FiMail}
               title="Email"
-              content="contact@ebagency.com"
+              content="contact.ebagency@gmail.com"
             />
             <ContactCard
               icon={FiMapPin}
@@ -176,21 +171,15 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
                   <FormField
                     label="Téléphone"
                     type="tel"
-                    placeholder="+33 6 12 34 56 78"
+                    placeholder="07 78 79 18 25"
                     icon={FiPhone}
                   />
                   <FormField
-                    label="Entreprise"
-                    placeholder="Nom de votre entreprise"
-                    icon={FiHome}
+                    label="Service souhaité"
+                    placeholder="Achat, Vente, Location"
+                    icon={FiMessageSquare}
                   />
                 </div>
-
-                <FormField
-                  label="Service souhaité"
-                  placeholder="Design, Branding, Marketing, etc."
-                  icon={FiMessageSquare}
-                />
 
                 <FormField
                   label="Message"
@@ -224,15 +213,15 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
                   <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 p-2 sm:p-3 md:p-4 bg-primary/5 rounded-lg sm:rounded-xl md:rounded-2xl border border-primary/20">
                     <FiClock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
                     <div>
-                      <p className="font-bold text-dark text-sm sm:text-base md:text-lg">Lundi - Vendredi</p>
-                      <p className="text-dark/80 font-medium text-xs sm:text-sm md:text-base">9h00 - 18h00</p>
+                      <p className="font-bold text-dark text-sm sm:text-base md:text-lg">Lundi au vendredi</p>
+                      <p className="text-dark/80 font-medium text-xs sm:text-sm md:text-base">9h – 18h</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 p-2 sm:p-3 md:p-4 bg-primary/5 rounded-lg sm:rounded-xl md:rounded-2xl border border-primary/20">
                     <FiClock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
                     <div>
                       <p className="font-bold text-dark text-sm sm:text-base md:text-lg">Samedi</p>
-                      <p className="text-dark/80 font-medium text-xs sm:text-sm md:text-base">10h00 - 16h00</p>
+                      <p className="text-dark/80 font-medium text-xs sm:text-sm md:text-base">10h – 19h</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 p-2 sm:p-3 md:p-4 bg-primary/5 rounded-lg sm:rounded-xl md:rounded-2xl border border-primary/20">

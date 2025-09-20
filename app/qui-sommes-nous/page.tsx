@@ -48,12 +48,13 @@ const teamMembers = [
 ];
 
 const values = [
-  { icon: FiStar, title: 'Excellence', description: 'Nous visons l\'excellence dans chaque détail, chaque projet, chaque interaction.' },
-  { icon: FiHeart, title: 'Passion', description: 'Notre passion pour la créativité et le luxe se reflète dans chaque création.' },
-  { icon: FiShield, title: 'Intégrité', description: 'Nous privilégions la transparence, l\'honnêteté et l\'éthique dans toutes nos relations.' },
-  { icon: FiZap, title: 'Innovation', description: 'Nous restons constamment à la pointe des tendances et technologies.' },
-  { icon: FiUsers, title: 'Collaboration', description: 'Nous croyons en la force du travail d\'équipe et de la collaboration.' },
-  { icon: FiTarget, title: 'Résultats', description: 'Notre succès se mesure à celui de nos clients et à l\'impact de nos créations.' }
+  { icon: FiShield, title: 'Confiance', description: 'Nous construisons des relations durables basées sur la confiance mutuelle et la transparence.' },
+  { icon: FiHeart, title: 'Écoute', description: 'Nous prenons le temps d\'écouter et de comprendre vos besoins pour vous offrir le meilleur service.' },
+  { icon: FiTarget, title: 'Engagement', description: 'Nous nous engageons pleinement dans chaque projet pour garantir votre satisfaction.' },
+  { icon: FiUsers, title: 'Proximité', description: 'Nous restons proches de nos clients tout au long de leur parcours immobilier.' },
+  { icon: FiStar, title: 'Expertise', description: 'Notre expertise reconnue vous accompagne dans tous vos projets immobiliers.' },
+  { icon: FiShield, title: 'Transparence', description: 'Nous privilégions la transparence et l\'honnêteté dans toutes nos relations.' },
+  { icon: FiZap, title: 'Excellence', description: 'Nous visons l\'excellence dans chaque détail, chaque projet, chaque interaction.' }
 ];
 
 const milestones = [
@@ -74,12 +75,10 @@ export default function AboutPage() {
             <div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-dm-serif text-primary mb-6 font-semibold">
                 Qui Sommes-Nous ?
-                <span className="block text-secondary">Notre Histoire</span>
               </h1>
               <p className="text-lg md:text-xl text-dark/80 leading-relaxed mb-8">
-                Depuis plus de 15 ans, EB Agency s&apos;impose comme une référence dans le domaine
-                de la communication de luxe. Notre passion pour l&apos;excellence et notre expertise
-                reconnue nous permettent de créer des expériences de marque exceptionnelles.
+                EB Agency, c'est une équipe passionnée qui accompagne chaque client comme un partenaire de confiance.
+                À l'écoute de vos besoins, nous vous accompagnons pas à pas pour transformer vos envies en réalité, avec attention et confiance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
@@ -140,32 +139,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-20 bg-light">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
-              Notre Histoire
-            </h2>
-            <p className="text-lg text-dark/80 leading-relaxed">
-              Fondée en 2008 par Émilie Bernard, EB Agency est née d&apos;une vision : créer une agence
-              de communication qui place l&apos;excellence et la créativité au cœur de chaque projet.
-              Aujourd&apos;hui, nous sommes fiers d&apos;accompagner les plus grandes marques de luxe dans
-              leur communication.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover-lift transition-all">
-                <div className="text-3xl font-dm-serif text-primary mb-3">{milestone.year}</div>
-                <h3 className="text-xl font-semibold text-primary mb-3">{milestone.title}</h3>
-                <p className="text-dark/70 leading-relaxed">{milestone.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Our Values */}
       <section className="py-20 bg-white">
@@ -194,44 +167,59 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team */}
+
+      {/* Notre Processus */}
       <section className="py-20 bg-light">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
-              Notre Équipe
+              Notre Processus
             </h2>
-            <p className="text-lg text-dark/80 max-w-2xl mx-auto">
-              Une équipe de professionnels passionnés, experts dans leur domaine,
-              unis par la même vision de l&apos;excellence et du service client.
+            <p className="text-lg text-dark/80 max-w-3xl mx-auto">
+              Quatre étapes claires pour vous accompagner sereinement dans votre projet
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg hover-lift transition-all overflow-hidden">
-                <div className="relative h-64">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-dm-serif text-primary mb-2">{member.name}</h3>
-                  <p className="text-secondary font-medium mb-3">{member.role}</p>
-                  <p className="text-dark/70 text-sm mb-4 leading-relaxed">{member.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {member.expertise.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">1</span>
               </div>
-            ))}
+              <h3 className="text-xl font-dm-serif text-primary mb-4">Écoute et analyse</h3>
+              <p className="text-dark/70 leading-relaxed">
+                Nous prenons le temps de comprendre vos besoins, vos attentes et vos objectifs pour définir ensemble la meilleure stratégie immobilière.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">2</span>
+              </div>
+              <h3 className="text-xl font-dm-serif text-primary mb-4">Mise en valeur et promotion</h3>
+              <p className="text-dark/70 leading-relaxed">
+                Nous préparons et mettons en avant votre bien ou recherchons les meilleures options pour votre futur achat/locatif, avec des outils adaptés et une communication efficace.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">3</span>
+              </div>
+              <h3 className="text-xl font-dm-serif text-primary mb-4">Accompagnement et transactions</h3>
+              <p className="text-dark/70 leading-relaxed">
+                Nous gérons les visites, négociations et toutes les démarches administratives pour assurer une transaction sécurisée et fluide.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">4</span>
+              </div>
+              <h3 className="text-xl font-dm-serif text-primary mb-4">Suivi et accompagnement après-vente/location</h3>
+              <p className="text-dark/70 leading-relaxed">
+                Nous restons à vos côtés même après la transaction pour répondre à vos questions et vous garantir une expérience complète et sereine.
+              </p>
+            </div>
           </div>
         </div>
       </section>

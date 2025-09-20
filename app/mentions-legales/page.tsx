@@ -51,7 +51,7 @@ export default function MentionsLegalesPage() {
                 <p className="text-dark/80 mb-4">
                   <strong>Directeur de la publication :</strong> Émilie Bernard<br />
                   <strong>Email :</strong> contact@ebagency.com<br />
-                  <strong>Téléphone :</strong> +33 1 23 45 67 89
+                  <strong>Téléphone :</strong> 07 78 79 18 25
                 </p>
               </div>
             </div>

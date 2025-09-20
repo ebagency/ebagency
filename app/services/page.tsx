@@ -30,7 +30,8 @@ const services = [
     id: 'achat',
     icon: FiEdit,
     title: 'Achat',
-    description: 'Accompagnement complet pour l\'achat de biens haut de gamme',
+    description: 'Votre futur commence ici',
+    subtitle: 'Nous vous aidons à trouver le bien idéal, rapidement et en toute sérénité.',
     features: [
       'Recherche sur-mesure',
       'Négociation optimale',
@@ -46,7 +47,8 @@ const services = [
     id: 'vente',
     icon: FiTarget,
     title: 'Vente',
-    description: 'Stratégie de vente premium et valorisation de vos biens',
+    description: 'Valorisez votre bien',
+    subtitle: 'Mettez toutes les chances de votre côté pour vendre efficacement et au meilleur prix.',
     features: [
       'Estimation précise',
       'Mise en valeur',
@@ -59,60 +61,46 @@ const services = [
     color: 'from-secondary to-accent'
   },
   {
-    id: 'locations',
+    id: 'location',
     icon: FiMonitor,
-    title: 'Locations',
-    description: 'Gestion et location de biens d\'exception',
+    title: 'Location',
+    description: 'Simplifiez vos projets',
+    subtitle: 'Louez ou faites louer votre bien facilement, avec un accompagnement complet à chaque étape.',
     features: [
       'Sélection de locataires',
       'Contrats et état des lieux',
       'Gestion complète',
       'Optimisation des revenus',
-      'Maintenance',
-      'Service premium'
+      'Maintenance'
     ],
     image: '/elements/appartement-1.jpg',
     color: 'from-accent to-secondary'
-  },
-  {
-    id: 'estimations-biens',
-    icon: FiGlobe,
-    title: 'Estimations & Biens',
-    description: 'Service d\'estimation et accès à notre portefeuille de biens',
-    features: [
-      'Estimation en 48h',
-      'Rapport détaillé',
-      'Accès biens off-market',
-      'Conseils personnalisés'
-    ],
-    image: '/elements/villa-3.jpg',
-    color: 'from-primary-dark to-primary'
   }
 ];
 
 const processSteps = [
   {
     step: '01',
-    title: 'Découverte & Audit',
-    description: 'Nous analysons votre marque, vos objectifs et votre marché pour définir la stratégie optimale.',
+    title: 'Écoute et analyse',
+    description: 'Nous prenons le temps de comprendre vos besoins, vos attentes et vos objectifs pour définir ensemble la meilleure stratégie immobilière.',
     icon: FiCamera
   },
   {
     step: '02',
-    title: 'Stratégie & Conception',
-    description: 'Développement de concepts créatifs et de stratégies personnalisées pour votre projet.',
+    title: 'Mise en valeur et promotion',
+    description: 'Nous préparons et mettons en avant votre bien ou recherchons les meilleures options pour votre futur achat/locatif, avec des outils adaptés et une communication efficace.',
     icon: FiEdit3
   },
   {
     step: '03',
-    title: 'Développement & Production',
-    description: 'Réalisation de tous les éléments créatifs avec une attention particulière aux détails.',
+    title: 'Accompagnement et transactions',
+    description: 'Nous gérons les visites, négociations et toutes les démarches administratives pour assurer une transaction sécurisée et fluide.',
     icon: FiZap
   },
   {
     step: '04',
-    title: 'Lancement & Optimisation',
-    description: 'Déploiement de votre projet avec suivi et optimisations continues pour maximiser les résultats.',
+    title: 'Suivi et accompagnement après-vente/location',
+    description: 'Nous restons à vos côtés même après la transaction pour répondre à vos questions et vous garantir une expérience complète et sereine.',
     icon: FiBarChart
   }
 ];
@@ -145,32 +133,33 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Stats Section */}
       <section className="py-16 md:py-20 bg-dark">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             <div className="text-white">
               <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
-                <CountUp end={150} suffix="+" />
+                <CountUp end={50} suffix="+" />
               </div>
               <div className="text-text-light text-xs md:text-sm">PROJETS RÉALISÉS</div>
             </div>
             <div className="text-white">
               <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
-                <CountUp end={98} suffix="%" />
+                <CountUp end={100} suffix="+" />
               </div>
-              <div className="text-text-light text-xs md:text-sm">CLIENTS SATISFAITS</div>
+              <div className="text-text-light text-xs md:text-sm">CLIENTS ACCOMPAGNÉS</div>
             </div>
             <div className="text-white">
               <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
-                <CountUp end={15} suffix="+" />
+                <CountUp end={10} suffix="+" />
               </div>
-              <div className="text-text-light text-xs md:text-sm">ANNÉES D&apos;EXPÉRIENCE</div>
+              <div className="text-text-light text-xs md:text-sm">ANS D&apos;EXPÉRIENCE</div>
             </div>
             <div className="text-white">
               <div className="text-2xl md:text-4xl font-dm-serif font-bold mb-2">
-                <CountUp end={24} suffix="/7" />
+                <CountUp end={24} suffix="h" />
               </div>
-              <div className="text-text-light text-xs md:text-sm">SUPPORT CLIENT</div>
+              <div className="text-text-light text-xs md:text-sm">RÉPONSE GARANTIE</div>
             </div>
           </div>
         </div>
@@ -183,10 +172,6 @@ export default function ServicesPage() {
             <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-4">
               Nos Services
             </h2>
-            <p className="text-dark/70 max-w-2xl mx-auto text-lg">
-              Chaque service est conçu avec passion et expertise pour répondre
-              aux standards les plus élevés du secteur du luxe.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -208,8 +193,9 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-dm-serif text-primary mb-3">{service.title}</h3>
-                  <p className="text-dark/70 mb-4 leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-dm-serif text-primary mb-2">{service.title}</h3>
+                  <p className="text-sm text-primary/70 mb-3 font-medium">{service.description}</p>
+                  <p className="text-dark/70 mb-4 leading-relaxed">{service.subtitle}</p>
 
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, index) => (
@@ -233,9 +219,8 @@ export default function ServicesPage() {
             <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-4">
               Notre Processus
             </h2>
-            <p className="text-dark/70 max-w-2xl mx-auto text-lg">
-              Une méthodologie éprouvée en 4 étapes pour garantir l&apos;excellence
-              de chaque projet et la satisfaction de nos clients.
+            <p className="text-dark/70 max-w-3xl mx-auto text-lg">
+              Quatre étapes claires pour vous accompagner sereinement dans votre projet
             </p>
           </div>
 

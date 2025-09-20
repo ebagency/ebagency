@@ -11,21 +11,21 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "EB Agency - Agence de Communication Luxueuse | Design & Branding Premium",
+    default: "EB Agency - Agence Immobilière d'Exception | Achat Vente Location",
     template: "%s | EB Agency"
   },
-  description: "EB Agency, agence de communication de luxe spécialisée dans le design, branding et marketing premium. 15+ ans d'expertise, 150+ projets réalisés. Transformez votre marque avec nos services sur-mesure.",
+  description: "EB Agency, agence immobilière d'exception spécialisée dans l'achat, la vente et la location de biens haut de gamme. 10+ ans d'expertise, 50+ projets réalisés. Votre partenaire immobilier de confiance.",
   keywords: [
-    "agence communication luxe",
-    "design premium",
-    "branding de luxe", 
-    "marketing haut de gamme",
-    "identité visuelle",
-    "communication corporate",
+    "agence immobilière",
+    "achat immobilier",
+    "vente immobilier", 
+    "location immobilier",
+    "biens immobiliers",
+    "immobilier de luxe",
     "EB Agency",
-    "agence design Paris",
-    "stratégie de marque",
-    "marketing digital luxe"
+    "agence immobilière Paris",
+    "projet immobilier",
+    "expertise immobilière"
   ],
   authors: [{ name: "EB Agency", url: "https://www.eb-agency.fr" }],
   creator: "EB Agency",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "EB Agency - Agence de Communication Luxueuse",
-    description: "Votre partenaire de confiance pour des communications de luxe exceptionnelles. Design, branding et marketing premium.",
+    title: "EB Agency - Agence Immobilière d'Exception",
+    description: "Votre partenaire de confiance pour vos projets immobiliers. Achat, vente et location de biens haut de gamme.",
     url: 'https://www.eb-agency.fr',
     siteName: 'EB Agency',
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: '/logo/Logo EB Agency avec baseline - sans fond.png',
         width: 1200,
         height: 630,
-        alt: 'EB Agency - Agence de Communication Luxueuse',
+        alt: 'EB Agency - Agence Immobilière d\'Exception',
       },
     ],
     locale: 'fr_FR',
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EB Agency - Agence de Communication Luxueuse',
-    description: 'Votre partenaire de confiance pour des communications de luxe exceptionnelles.',
+    title: 'EB Agency - Agence Immobilière d\'Exception',
+    description: 'Votre partenaire de confiance pour vos projets immobiliers.',
     images: ['/logo/Logo EB Agency avec baseline - sans fond.png'],
   },
   robots: {
