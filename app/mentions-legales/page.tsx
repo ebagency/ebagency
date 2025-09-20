@@ -50,7 +50,7 @@ export default function MentionsLegalesPage() {
                 </p>
                 <p className="text-dark/80 mb-4">
                   <strong>Directeur de la publication :</strong> Émilie Bernard<br />
-                  <strong>Email :</strong> contact@ebagency.com<br />
+                  <strong>Email :</strong> contact@ebagency.fr<br />
                   <strong>Téléphone :</strong> 07 78 79 18 25
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function MentionsLegalesPage() {
                   Les données personnelles collectées sur ce site sont destinées à EB Agency et ne seront en aucun cas transmises à des tiers sans votre accord préalable.
                 </p>
                 <p className="text-dark/80">
-                  Pour exercer ces droits, vous pouvez nous contacter à l&apos;adresse : contact@ebagency.com
+                  Pour exercer ces droits, vous pouvez nous contacter à l&apos;adresse : contact@ebagency.fr
                 </p>
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function MentionsLegalesPage() {
                 </p>
                 <p className="text-dark/80 mb-4">
                   Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, 
-                  à l&apos;adresse contact@ebagency.com, en décrivant le problème de la manière la plus précise possible.
+                  à l&apos;adresse contact@ebagency.fr, en décrivant le problème de la manière la plus précise possible.
                 </p>
                 <p className="text-dark/80">
                   Tout contenu téléchargé se fait aux risques et périls de l&apos;utilisateur et sous sa seule responsabilité. 

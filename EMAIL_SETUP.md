@@ -15,7 +15,7 @@ SMTP_PORT=587
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 SMTP_FROM=your-email@gmail.com
-SMTP_TO=contact@ebagency.com
+SMTP_TO=contact@ebagency.fr
 ```
 
 ## 📮 Configuration Gmail
@@ -37,7 +37,7 @@ SMTP_PORT=587
 SMTP_USER=votre-email@gmail.com
 SMTP_PASS=votre-mot-de-passe-application
 SMTP_FROM=votre-email@gmail.com
-SMTP_TO=contact@ebagency.com
+SMTP_TO=contact@ebagency.fr
 ```
 
 ## 📮 Configuration Outlook/Office 365
@@ -48,7 +48,7 @@ SMTP_PORT=587
 SMTP_USER=votre-email@outlook.com
 SMTP_PASS=votre-mot-de-passe
 SMTP_FROM=votre-email@outlook.com
-SMTP_TO=contact@ebagency.com
+SMTP_TO=contact@ebagency.fr
 ```
 
 ## 📮 Configuration Yahoo
@@ -59,7 +59,7 @@ SMTP_PORT=587
 SMTP_USER=votre-email@yahoo.com
 SMTP_PASS=votre-mot-de-passe-application
 SMTP_FROM=votre-email@yahoo.com
-SMTP_TO=contact@ebagency.com
+SMTP_TO=contact@ebagency.fr
 ```
 
 ## 🔒 Sécurité

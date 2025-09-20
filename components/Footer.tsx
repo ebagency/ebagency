@@ -59,7 +59,7 @@ export function Footer() {
           <div className="md:px-6  max-md:basis-full max-md:mx-auto">
             <h4 className="font-semibold mb-4 text-white/65!">CONTACT</h4>
             <div className="space-y-2 text-sm text-light">
-              <p className="hover:text-white transition-colors cursor-pointer">contact@ebagency.com</p>
+              <p className="hover:text-white transition-colors cursor-pointer">contact@ebagency.fr</p>
               <p className="hover:text-white transition-colors cursor-pointer">07 78 79 18 25</p>
               <p className="hover:text-white transition-colors cursor-pointer">123 Avenue des Champs-Élysées, 75008 Paris</p>
             </div>

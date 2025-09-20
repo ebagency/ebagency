@@ -118,7 +118,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           description: 'Agence de communication de luxe spécialisée dans le design, branding et marketing premium',
           url: baseUrl,
           telephone: '07 78 79 18 25',
-          email: 'contact@ebagency.com',
+          email: 'contact@ebagency.fr',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '123 Avenue des Champs-Élysées',
@@ -180,7 +180,7 @@ export function OrganizationStructuredData() {
     contactPoint: {
       telephone: '07 78 79 18 25',
       contactType: 'customer service',
-      email: 'contact@ebagency.com'
+      email: 'contact@ebagency.fr'
     },
     sameAs: [
       'https://www.linkedin.com/company/eb-agency',

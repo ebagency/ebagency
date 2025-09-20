@@ -60,7 +60,7 @@ export default function PolitiqueConfidentialitePage() {
                   SAS au capital de 50 000 €<br />
                   RCS Paris B 123 456 789<br />
                   Siège social : 123 Avenue des Champs-Élysées, 75008 Paris, France<br />
-                  Email : contact@ebagency.com<br />
+                  Email : contact@ebagency.fr<br />
                   Téléphone : 07 78 79 18 25
                 </p>
                 <p className="text-dark/80">
@@ -186,7 +186,7 @@ export default function PolitiqueConfidentialitePage() {
                 </ul>
                 <p className="text-dark/80 mt-4">
                   Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur 
-                  ou en nous contactant à : <strong>contact@ebagency.com</strong>
+                  ou en nous contactant à : <strong>contact@ebagency.fr</strong>
                 </p>
               </div>
             </div>

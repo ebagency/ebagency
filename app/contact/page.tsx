@@ -129,7 +129,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
             <ContactCard
               icon={FiMail}
               title="Email"
-              content="contact.ebagency@gmail.com"
+              content="contact@ebagency.fr"
             />
             <ContactCard
               icon={FiMapPin}

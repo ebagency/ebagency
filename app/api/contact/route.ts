@@ -34,7 +34,7 @@ async function sendEmail(data: { name: string; email: string; message: string; p
   // Contenu de l'email
   const mailOptions = {
     from: process.env.SMTP_FROM || process.env.SMTP_USER,
-    to: process.env.SMTP_TO || 'contact@ebagency.com',
+    to: process.env.SMTP_TO || 'contact@ebagency.fr',
     subject: `Nouveau message de contact - ${data.name}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
