@@ -40,7 +40,7 @@ export function ListingCard({ listing, className }: ListingCardProps) {
         </div>
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xl font-semibold">{formattedPrice}{status === 'location' ? ' /mois' : ''}</div>
-          <Link href={`#${id}`} className="text-sm text-primary underline underline-offset-4 hover:opacity-80">Détails</Link>
+          <Link href={`/contact`} className="text-sm text-primary underline underline-offset-4 hover:opacity-80">Détails</Link>
         </div>
       </div>
     </article>

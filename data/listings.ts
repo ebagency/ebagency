@@ -26,7 +26,7 @@ export const listings: Listing[] = [
     bedrooms: 6,
     bathrooms: 5,
     propertyType: 'villa',
-    images: ['/elements/villa-1.webp'],
+    images: ['/Villa Mougins.jpeg'],
     available: true,
     featured: true,
     description: 'Villa contemporaine exceptionnelle avec vue panoramique sur la Méditerranée.'
@@ -41,7 +41,7 @@ export const listings: Listing[] = [
     bedrooms: 6,
     bathrooms: 7,
     propertyType: 'hôtel particulier',
-    images: ['/elements/villa-2.jpg'],
+    images: ['/Hotel particulier.jpg'],
     available: true,
     featured: true,
     description: 'Hôtel particulier prestigieux dans le 16ème arrondissement de Paris.'
@@ -56,7 +56,7 @@ export const listings: Listing[] = [
     bedrooms: 2,
     bathrooms: 1,
     propertyType: 'appartement',
-    images: ['/elements/appartement-1.jpg'],
+    images: ['/Appartement Exelmens.jpeg'],
     available: true,
     description: 'Appartement moderne et lumineux proche du métro.'
   },
@@ -71,7 +71,7 @@ export const listings: Listing[] = [
     bathrooms: 2,
     exterieur_m2: 20,
     propertyType: 'appartement',
-    images: ['/elements/appartement-1.jpg'],
+    images: ['/appartement st cloud.jpeg'],
     available: true,
     description: 'Appartement avec balcon et terrasse privative.'
   },
@@ -86,7 +86,7 @@ export const listings: Listing[] = [
     bathrooms: 3,
     exterieur_m2: 600,
     propertyType: 'maison',
-    images: ['/elements/villa-3.jpg'],
+    images: ['/Maison La-Frette-sur-Seine.jpeg'],
     available: true,
     description: 'Maison moderne avec grand jardin et piscine.'
   }

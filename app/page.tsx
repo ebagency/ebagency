@@ -8,16 +8,16 @@ import Link from 'next/link';
 export default function Home() {
   // Images pour les services
   const serviceImages = [
-    '/elements/villa-1.webp',
-    '/elements/appartement-1.jpg',
-    '/elements/villa-2.jpg'
+    '/Villa Mougins.jpeg',
+    '/Hotel particulier.jpg',
+    '/Appartement Exelmens.jpeg'
   ];
 
   // Images pour les projets du portfolio
   const portfolioImages = [
-    '/elements/villa-3.jpg',
-    '/elements/villa-1.webp',
-    '/elements/appartement-1.jpg'
+    '/Maison La-Frette-sur-Seine.jpeg',
+    '/Villa Mougins.jpeg',
+    '/Appartement Exelmens.jpeg'
   ];
 
   return (
@@ -95,7 +95,7 @@ export default function Home() {
                 <div className="relative bg-white p-4 md:p-8 rounded-3xl shadow-2xl">
                   <div className="aspect-[4/3] bg-gradient-to-br from-accent to-light rounded-2xl overflow-hidden">
                     <Image
-                      src="/elements/villa-1.webp"
+                      src="/Villa Mougins.jpeg"
                       alt="Villa de luxe"
                       width={300}
                       height={225}
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="relative bg-light p-4 md:p-8 rounded-3xl">
                 <div className="aspect-video bg-gradient-to-br from-accent to-light rounded-2xl overflow-hidden">
                   <Image
-                    src="/elements/villa-2.jpg"
+                    src="/Hotel particulier.jpg"
                     alt="Excellence EB Agency"
                     width={600}
                     height={400}

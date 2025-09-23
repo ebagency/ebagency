@@ -39,7 +39,7 @@ const services = [
       'Réseau exclusif',
       'Suivi personnalisé'
     ],
-    image: '/elements/villa-1.webp',
+    image: '/Villa Mougins.jpeg',
     color: 'from-primary to-primary-dark'
   },
   {
@@ -56,7 +56,7 @@ const services = [
       'Négociation',
       'Suivi jusqu\'à l\'acte'
     ],
-    image: '/elements/villa-2.jpg',
+    image: '/Hotel particulier.jpg',
     color: 'from-secondary to-accent'
   },
   {
@@ -72,7 +72,7 @@ const services = [
       'Optimisation des revenus',
       'Maintenance'
     ],
-    image: '/elements/appartement-1.jpg',
+    image: '/Appartement Exelmens.jpeg',
     color: 'from-accent to-secondary'
   }
 ];

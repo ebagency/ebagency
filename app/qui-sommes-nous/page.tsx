@@ -147,7 +147,7 @@ export default function AboutPage() {
               <div className="relative bg-white p-8 rounded-3xl shadow-2xl">
                 <div className="aspect-video bg-gradient-to-br from-accent to-light rounded-2xl overflow-hidden">
                   <Image
-                    src="/elements/villa-1.webp"
+                    src="/Villa Mougins.jpeg"
                     alt="Équipe EB Agency"
                     fill
                     className="object-cover rounded-3xl"

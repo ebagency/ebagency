@@ -21,9 +21,9 @@ export function Header() {
   // Images de background pour le slider du header (avec versions mobile)
   const headerBackgrounds = [
     {
-      src: '/backgrounds/header-1.jpg',
-      srcMobile: '/backgrounds/header-1.jpg', // Même image mais optimisée pour mobile
-      alt: 'Header background 1',
+      src: '/Villa Mougins.jpeg',
+      srcMobile: '/Villa Mougins.jpeg', // Même image mais optimisée pour mobile
+      alt: 'Villa de luxe à Mougins',
       title: 'L\'AGENCE IMMOBILIÈRE D\'EXCEPTION',
       titleMobile: 'L\'AGENCE IMMOBILIÈRE D\'EXCEPTION',
       subtitle: 'Agence Immobilière',
@@ -31,9 +31,9 @@ export function Header() {
       span: 'EB AGENCY'
     },
     {
-      src: '/backgrounds/wallpaperflare.com_wallpaper.jpg',
-      srcMobile: '/backgrounds/wallpaperflare.com_wallpaper.jpg',
-      alt: 'Header background 2',
+      src: '/Hotel particulier.jpg',
+      srcMobile: '/Hotel particulier.jpg',
+      alt: 'Hôtel particulier à Paris',
       title: 'VOTRE PARTENAIRE IMMOBILIER',
       titleMobile: 'VOTRE PARTENAIRE IMMOBILIER',
       subtitle: 'Agence Immobilière',
@@ -41,9 +41,9 @@ export function Header() {
       span: 'EB AGENCY'
     },
     {
-      src: '/backgrounds/Best-HD-Backgrounds-Photos-Download.jpg',
-      srcMobile: '/backgrounds/Best-HD-Backgrounds-Photos-Download.jpg',
-      alt: 'Header background 3',
+      src: '/Maison La-Frette-sur-Seine.jpeg',
+      srcMobile: '/Maison La-Frette-sur-Seine.jpeg',
+      alt: 'Maison moderne à La Frette-sur-Seine',
       title: 'RÉUSSIR VOTRE PROJET SIMPLEMENT',
       titleMobile: 'RÉUSSIR VOTRE PROJET SIMPLEMENT',
       subtitle: 'Agence Immobilière',
