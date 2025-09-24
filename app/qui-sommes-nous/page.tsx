@@ -57,7 +57,7 @@ const teamMembers = [
   {
     name: "Wided",
     role: "Directrice des Opérations et Marketing",
-    image: "/elements/team/team_4.png",
+    image: "/elements/team/team_4.jpg",
     description:
       "Experte en opérations et marketing, optimise les processus et développe la visibilité de l'agence.",
     expertise: ["Opérations", "Marketing", "Optimisation"],
@@ -326,7 +326,7 @@ export default function AboutPage() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className={`object-cover ${member.image === '/elements/team/team_4.jpg' && 'object-top relative'}`}
                   />
                 </div>
                 <div className="p-6">
