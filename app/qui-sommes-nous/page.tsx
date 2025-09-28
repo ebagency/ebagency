@@ -202,9 +202,9 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 border border-primary/20 shadow-lg hover-lift transition-all duration-300">
+              <div key={index} className="text-center basis-full max-w-[450px] p-6 border border-primary/20 shadow-lg hover-lift transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
