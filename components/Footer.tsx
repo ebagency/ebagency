@@ -11,8 +11,8 @@ export function Footer() {
             <Image
               src="/logo/Logos EB AGENCY blanc sans fond (1).png"
               alt="EB Agency Logo"
-              width={80}
-              height={40}
+              width={100}
+              height={100}
               className="logo-image"
             />
           </div>
@@ -22,9 +22,6 @@ export function Footer() {
               <h3 className="text-lg font-dm-serif">EB Agency</h3>
               <p className="text-xs text-light">Paris, France</p>
             </div>
-            <p className="text-light text-sm max-w-[380px]">
-              Votre partenaire de confiance pour des communications de luxe exceptionnelles.
-            </p>
           </div>
 
           <div className="md:px-6  max-md:basis-full max-md:mx-auto">
@@ -51,7 +48,7 @@ export function Footer() {
                 <Link href="/qui-sommes-nous">À propos</Link>
               </li>
               <li className="hover:text-white transition-colors cursor-pointer">
-                <Link href="/qui-sommes-nous">Équipe</Link>
+                <Link href="/qui-sommes-nous#equipe">Équipe</Link>
               </li>
             </ul>
           </div>
@@ -61,7 +58,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-light">
               <p className="hover:text-white transition-colors cursor-pointer">contact@ebagency.fr</p>
               <p className="hover:text-white transition-colors cursor-pointer">07 78 79 18 25</p>
-              <p className="hover:text-white transition-colors cursor-pointer">123 Avenue des Champs-Élysées, 75008 Paris</p>
+              <p className="hover:text-white transition-colors cursor-pointer">78 Avenue des Champs-Élysées, 75008 Paris</p>
             </div>
           </div>
         </div>

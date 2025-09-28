@@ -134,7 +134,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
             <ContactCard
               icon={FiMapPin}
               title="Adresse"
-              content="123 Avenue des Champs-Élysées, 75008 Paris"
+              content="78 Avenue des Champs-Élysées, 75008 Paris"
               className="sm:col-span-2 lg:col-span-1"
             />
           </div>

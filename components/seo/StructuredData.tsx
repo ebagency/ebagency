@@ -121,7 +121,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           email: 'contact@ebagency.fr',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '123 Avenue des Champs-Élysées',
+            streetAddress: '78 Avenue des Champs-Élysées',
             addressLocality: 'Paris',
             addressRegion: 'Île-de-France',
             postalCode: '75008',
@@ -171,7 +171,7 @@ export function OrganizationStructuredData() {
     logo: 'https://www.eb-agency.fr/logo/Logo EB Agency avec baseline - sans fond.png',
     description: 'Agence de communication de luxe spécialisée dans le design, branding et marketing premium. 15+ ans d\'expertise, 150+ projets réalisés.',
     address: {
-      streetAddress: '123 Avenue des Champs-Élysées',
+      streetAddress: '78 Avenue des Champs-Élysées',
       addressLocality: 'Paris',
       addressRegion: 'Île-de-France',
       postalCode: '75008',

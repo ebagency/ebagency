@@ -59,7 +59,7 @@ export default function PolitiqueConfidentialitePage() {
                   <strong>EB Agency</strong><br />
                   SAS au capital de 50 000 €<br />
                   RCS Paris B 123 456 789<br />
-                  Siège social : 123 Avenue des Champs-Élysées, 75008 Paris, France<br />
+                  Siège social : 78 Avenue des Champs-Élysées, 75008 Paris, France<br />
                   Email : contact@ebagency.fr<br />
                   Téléphone : 07 78 79 18 25
                 </p>
@@ -267,7 +267,7 @@ export default function PolitiqueConfidentialitePage() {
                 <p className="text-dark/80">
                   <strong>Email :</strong> dpo@ebagency.com<br />
                   <strong>Téléphone :</strong> 07 78 79 18 25<br />
-                  <strong>Adresse :</strong> 123 Avenue des Champs-Élysées, 75008 Paris, France
+                  <strong>Adresse :</strong> 78 Avenue des Champs-Élysées, 75008 Paris, France
                 </p>
               </div>
             </div>

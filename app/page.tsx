@@ -397,9 +397,6 @@ export default function Home() {
             <Link href="/contact" className="bg-secondary text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
               DÉMARRER UN PROJET
             </Link>
-            <Link href="/contact" className="bg-secondary text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
-              PRENDRE RENDEZ-VOUS
-            </Link>
           </div>
         </div>
       </section>

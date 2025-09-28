@@ -39,7 +39,7 @@ export function ListingCard({ listing, className }: ListingCardProps) {
           <span>• {propertyType}</span>
         </div>
         <div className="mt-4 flex items-center justify-between">
-          <Link href={`/contacte`} className="text-sm text-primary underline underline-offset-4 hover:opacity-80">Détails</Link>
+          <Link href={`/contact`} className="text-sm text-primary underline underline-offset-4 hover:opacity-80">Contactez-nous</Link>
         </div>
       </div>
     </article>

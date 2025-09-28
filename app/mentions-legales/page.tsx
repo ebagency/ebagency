@@ -41,7 +41,7 @@ export default function MentionsLegalesPage() {
                 <p className="text-dark/80 mb-4">
                   <strong>Raison sociale :</strong> EB Agency<br />
                   <strong>Forme juridique :</strong> Société par actions simplifiée (SAS)<br />
-                  <strong>Siège social :</strong> 123 Avenue des Champs-Élysées, 75008 Paris, France<br />
+                  <strong>Siège social :</strong> 78 Avenue des Champs-Élysées, 75008 Paris, France<br />
                   <strong>Capital social :</strong> 50 000 €<br />
                   <strong>RCS :</strong> Paris B 123 456 789<br />
                   <strong>SIRET :</strong> 123 456 789 00012<br />

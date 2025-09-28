@@ -128,16 +128,10 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="#"
+                  href="#equipe"
                   className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift"
                 >
                   DÉCOUVRIR NOTRE ÉQUIPE
-                </Link>
-                <Link
-                  href="#"
-                  className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift"
-                >
-                  NOS RÉFÉRENCES
                 </Link>
               </div>
             </div>
@@ -206,15 +200,11 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
               Nos Valeurs
             </h2>
-            <p className="text-lg text-dark/80 max-w-2xl mx-auto">
-              Ces valeurs fondamentales guident notre travail quotidien et
-              définissent notre approche unique de la communication de luxe.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6">
+              <div key={index} className="text-center p-6 border border-primary/20 shadow-lg hover-lift transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
@@ -304,7 +294,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-light"  id="equipe">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-dm-serif text-primary mb-6">
@@ -352,34 +342,6 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-dm-serif text-white mb-6">
-            Rejoignez Nos Clients Satisfaits
-          </h2>
-          <p className="text-text-light text-lg mb-8 max-w-2xl mx-auto">
-            Découvrez comment notre expertise et notre passion peuvent
-            transformer votre vision en réalité et élever votre marque vers de
-            nouveaux sommets.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift"
-            >
-              DÉMARRER UN PROJET
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift"
-            >
-              PRENDRE RENDEZ-VOUS
-            </Link>
           </div>
         </div>
       </section>
