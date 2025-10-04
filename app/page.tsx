@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { Header, CountUp } from '@/components';
 import { OrganizationStructuredData, LocalBusinessStructuredData } from '@/components/seo';
+import { FAQStructuredData, realEstateFAQs } from '@/components/seo/FAQStructuredData';
+import { EBAgencyGeoStructuredData } from '@/components/seo/GeoStructuredData';
 import Link from 'next/link';
 
 export default function Home() {
@@ -25,6 +27,8 @@ export default function Home() {
       {/* Données structurées SEO */}
       <OrganizationStructuredData />
       <LocalBusinessStructuredData />
+      <FAQStructuredData faqs={realEstateFAQs} />
+      <EBAgencyGeoStructuredData />
 
       {/* Header avec Slider */}
       <Header />

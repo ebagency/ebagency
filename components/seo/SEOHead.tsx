@@ -21,7 +21,7 @@ export function SEOHead({
   noindex = false,
   nofollow = false
 }: SEOHeadProps) {
-  const baseUrl = 'https://www.eb-agency.fr';
+  const baseUrl = 'https://www.ebagency.fr';
   const fullTitle = title ? `${title} | EB Agency` : 'EB Agency - Agence de Communication Luxueuse';
   const fullDescription = description || 'EB Agency, agence de communication de luxe spécialisée dans le design, branding et marketing premium. 15+ ans d\'expertise, 150+ projets réalisés.';
   const canonicalUrl = canonical ? `${baseUrl}${canonical}` : baseUrl;

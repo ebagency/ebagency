@@ -3,14 +3,29 @@ import Link from 'next/link';
 import { listings } from '@/data/listings';
 import { ListingCard } from '@/components/biens/ListingCard';
 import { Filters } from '@/components/biens/Filters';
+import { RealEstateStructuredData } from '@/components/seo/StructuredData';
 
 export const metadata: Metadata = {
-  title: 'Biens immobiliers - EB Agency',
-  description: 'Découvrez nos biens immobiliers à vendre et à louer: villas, appartements, maisons. Filtrez par ville, prix, surface et plus.',
+  title: 'Biens Immobiliers Paris - EB Agency | Achat Vente Location',
+  description: 'Découvrez notre sélection exclusive de biens immobiliers à Paris : appartements, maisons, villas et hôtels particuliers à vendre et à louer. Filtrez par arrondissement, prix et surface.',
+  keywords: [
+    'biens immobiliers Paris',
+    'appartement Paris',
+    'maison Paris',
+    'villa Paris',
+    'hôtel particulier Paris',
+    'achat immobilier Paris',
+    'vente immobilier Paris',
+    'location immobilier Paris',
+    'immobilier 75008',
+    'immobilier Champs-Élysées',
+    'biens de luxe Paris',
+    'investissement immobilier Paris'
+  ],
   alternates: { canonical: '/biens' },
   openGraph: {
-    title: 'Biens immobiliers - EB Agency',
-    description: 'Sélection haut de gamme de biens à vendre et à louer',
+    title: 'Biens Immobiliers Paris - EB Agency',
+    description: 'Sélection haut de gamme de biens immobiliers à vendre et à louer à Paris',
     type: 'website',
     url: '/biens'
   }
@@ -96,7 +111,7 @@ export default async function BiensPage({ searchParams }: { searchParams: Promis
     itemListElement: items.map((l, idx) => ({
       '@type': 'ListItem',
       position: (currentPage - 1) * pageSize + idx + 1,
-      url: `https://www.eb-agency.fr/biens#${l.id}`,
+      url: `https://www.ebagency.fr/biens#${l.id}`,
       name: l.title
     }))
   };
@@ -104,6 +119,7 @@ export default async function BiensPage({ searchParams }: { searchParams: Promis
   return (
     <main className="min-h-screen bg-light pt-28 pb-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <RealEstateStructuredData listings={items} />
 
       <section className="px-4 md:px-8 max-w-7xl mx-auto text-dark">
         <header className="mb-8">

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Button } from '@/components';
 import { 
   FiPhone, 
@@ -10,6 +11,28 @@ import {
   FiCheckCircle
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
+
+export const metadata: Metadata = {
+  title: 'Contact - EB Agency | Agence Immobilière Paris 75008',
+  description: 'Contactez EB Agency, votre agence immobilière à Paris. Téléphone, email et adresse au 78 Avenue des Champs-Élysées. Devis gratuit et conseil personnalisé.',
+  keywords: [
+    'contact agence immobilière Paris',
+    'EB Agency contact',
+    'agence immobilière 75008',
+    'Champs-Élysées immobilier',
+    'devis immobilier gratuit',
+    'conseil immobilier Paris',
+    'rendez-vous immobilier',
+    'estimation gratuite Paris'
+  ],
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact - EB Agency Agence Immobilière Paris',
+    description: 'Contactez notre équipe d\'experts immobiliers à Paris pour vos projets d\'achat, vente ou location',
+    type: 'website',
+    url: '/contact'
+  }
+};
 
 // Composant pour afficher les messages de succès
 const SuccessMessage = ({ message }: { message: string }) => (

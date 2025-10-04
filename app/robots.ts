@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/', '/_next/', '/private/'],
     },
-    sitemap: 'https://www.eb-agency.fr/sitemap.xml',
+    sitemap: 'https://www.ebagency.fr/sitemap.xml',
   }
 }

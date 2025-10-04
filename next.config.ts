@@ -83,13 +83,33 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/pricing',
-        destination: '/tarifs',
+        source: '/properties',
+        destination: '/biens',
         permanent: true,
       },
       {
-        source: '/partnership',
-        destination: '/partenariat',
+        source: '/real-estate',
+        destination: '/biens',
+        permanent: true,
+      },
+      {
+        source: '/immobilier',
+        destination: '/biens',
+        permanent: true,
+      },
+      {
+        source: '/achat-immobilier',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/vente-immobilier',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/location-immobilier',
+        destination: '/services',
         permanent: true,
       },
     ];

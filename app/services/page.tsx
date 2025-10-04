@@ -13,12 +13,24 @@ import {
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Nos Services - EB Agency',
-  description: 'Nos services: Achat, Vente, Locations, Estimations & Biens.',
+  title: 'Nos Services Immobiliers - EB Agency | Achat Vente Location Paris',
+  description: 'Découvrez nos services immobiliers d\'exception à Paris : achat, vente, location, estimation et gestion de biens immobiliers haut de gamme. Expertise professionnelle garantie.',
+  keywords: [
+    'services immobiliers Paris',
+    'achat immobilier Paris',
+    'vente immobilier Paris',
+    'location immobilier Paris',
+    'estimation immobilière Paris',
+    'gestion locative Paris',
+    'conseil immobilier Paris',
+    'accompagnement immobilier',
+    'expertise immobilière',
+    'EB Agency services'
+  ],
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Nos Services - EB Agency',
-    description: 'Achat, Vente, Locations, Estimations & Biens',
+    title: 'Nos Services Immobiliers - EB Agency Paris',
+    description: 'Services immobiliers d\'exception : achat, vente, location et estimation à Paris',
     type: 'website',
     url: '/services'
   }

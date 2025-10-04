@@ -40,7 +40,7 @@ interface StructuredDataProps {
 
 export function StructuredData({ type, data }: StructuredDataProps) {
   const getStructuredData = () => {
-    const baseUrl = 'https://www.eb-agency.fr';
+    const baseUrl = 'https://www.ebagency.fr';
     
     switch (type) {
       case 'organization':
@@ -113,9 +113,9 @@ export function StructuredData({ type, data }: StructuredDataProps) {
       case 'localBusiness':
         return {
           '@context': 'https://schema.org',
-          '@type': 'ProfessionalService',
+          '@type': 'RealEstateAgent',
           name: 'EB Agency',
-          description: 'Agence de communication de luxe spécialisée dans le design, branding et marketing premium',
+          description: 'Agence immobilière d\'exception spécialisée dans l\'achat, la vente et la location de biens immobiliers haut de gamme à Paris',
           url: baseUrl,
           telephone: '07 78 79 18 25',
           email: 'contact@ebagency.fr',
@@ -134,12 +134,42 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           },
           openingHours: [
             'Mo-Fr 09:00-18:00',
-            'Sa 10:00-16:00'
+            'Sa 10:00-19:00'
           ],
           priceRange: '€€€',
           serviceArea: {
-            '@type': 'Country',
-            name: 'France'
+            '@type': 'City',
+            name: 'Paris'
+          },
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'Services Immobiliers',
+            itemListElement: [
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Achat Immobilier',
+                  description: 'Accompagnement personnalisé pour l\'achat de biens immobiliers'
+                }
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Vente Immobilière',
+                  description: 'Expertise en vente et mise en valeur de biens immobiliers'
+                }
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Location Immobilière',
+                  description: 'Gestion complète de la location de biens immobiliers'
+                }
+              }
+            ]
           }
         };
 
@@ -167,9 +197,9 @@ export function StructuredData({ type, data }: StructuredDataProps) {
 export function OrganizationStructuredData() {
   const data: OrganizationData = {
     name: 'EB Agency',
-    url: 'https://www.eb-agency.fr',
-    logo: 'https://www.eb-agency.fr/logo/Logo EB Agency avec baseline - sans fond.png',
-    description: 'Agence de communication de luxe spécialisée dans le design, branding et marketing premium. 15+ ans d\'expertise, 150+ projets réalisés.',
+    url: 'https://www.ebagency.fr',
+    logo: 'https://www.ebagency.fr/logo/Logo EB Agency avec baseline - sans fond.png',
+    description: 'Agence immobilière d\'exception spécialisée dans l\'achat, la vente et la location de biens immobiliers haut de gamme à Paris. 15+ ans d\'expertise, 150+ projets réalisés.',
     address: {
       streetAddress: '78 Avenue des Champs-Élysées',
       addressLocality: 'Paris',
@@ -214,4 +244,53 @@ export function BreadcrumbStructuredData({ items }: { items: { name: string; url
 
 export function LocalBusinessStructuredData() {
   return <StructuredData type="localBusiness" data={null} />;
+}
+
+// Données structurées pour les biens immobiliers
+export function RealEstateStructuredData({ listings }: { listings: any[] }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Biens Immobiliers EB Agency',
+    description: 'Sélection de biens immobiliers haut de gamme à Paris',
+    itemListElement: listings.map((listing, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'RealEstateListing',
+        name: listing.title,
+        description: listing.description,
+        url: `https://www.ebagency.fr/biens#${listing.id}`,
+        image: listing.images?.[0],
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: listing.city,
+          addressRegion: 'Île-de-France',
+          addressCountry: 'FR'
+        },
+        offers: {
+          '@type': 'Offer',
+          price: listing.price,
+          priceCurrency: 'EUR',
+          availability: listing.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'
+        },
+        floorSize: {
+          '@type': 'QuantitativeValue',
+          value: listing.areaM2,
+          unitCode: 'MTK'
+        },
+        numberOfRooms: listing.bedrooms
+      }
+    }))
+  };
+
+  return (
+    <Script
+      id="real-estate-structured-data"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2)
+      }}
+    />
+  );
 }

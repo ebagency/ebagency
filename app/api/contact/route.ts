@@ -86,7 +86,7 @@ async function sendEmail(data: { name: string; email: string; message: string; p
           <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
             <p style="color: #666; font-size: 14px; margin: 0;">
               Message envoyé depuis le formulaire de contact EB Agency<br>
-              <a href="https://www.eb-agency.fr" style="color: #8B4513; text-decoration: none;">www.eb-agency.fr</a>
+              <a href="https://www.ebagency.fr" style="color: #8B4513; text-decoration: none;">www.eb-agency.fr</a>
             </p>
           </div>
         </div>

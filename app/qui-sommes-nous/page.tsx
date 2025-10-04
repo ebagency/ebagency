@@ -12,14 +12,24 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Qui Sommes-Nous - EB Agency",
+  title: "Qui Sommes-Nous - EB Agency | Agence Immobilière Paris",
   description:
-    "Découvrez l'histoire, les valeurs et l'équipe d'EB Agency, votre partenaire de confiance en communication de luxe depuis plus de 15 ans.",
+    "Découvrez l'histoire, les valeurs et l'équipe d'EB Agency, votre agence immobilière de confiance à Paris depuis plus de 15 ans. Expertise en achat, vente et location immobilière.",
+  keywords: [
+    "agence immobilière Paris",
+    "équipe immobilière Paris",
+    "histoire agence immobilière",
+    "valeurs immobilières",
+    "expertise immobilière Paris",
+    "EB Agency équipe",
+    "agent immobilier Paris",
+    "professionnel immobilier"
+  ],
   alternates: { canonical: "/qui-sommes-nous" },
   openGraph: {
-    title: "À Propos d'EB Agency - Communication de Luxe",
+    title: "À Propos d'EB Agency - Agence Immobilière Paris",
     description:
-      "Notre histoire, nos valeurs et notre engagement envers l'excellence",
+      "Notre histoire, nos valeurs et notre engagement envers l'excellence immobilière à Paris",
     type: "website",
     url: "/qui-sommes-nous",
   },
