@@ -8,3 +8,4 @@ export {
 } from './StructuredData';
 
 export { SEOHead } from './SEOHead';
+export { Analytics, useAnalytics } from './Analytics';
