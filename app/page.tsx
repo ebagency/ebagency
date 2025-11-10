@@ -1,11 +1,49 @@
 // server directive non nécessaire
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Header, CountUp } from '@/components';
 import { OrganizationStructuredData, LocalBusinessStructuredData } from '@/components/seo';
 import { FAQStructuredData, realEstateFAQs } from '@/components/seo/FAQStructuredData';
 import { EBAgencyGeoStructuredData } from '@/components/seo/GeoStructuredData';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Accueil - Agence Immobilière d'Exception à Paris",
+  description: "EB Agency, votre agence immobilière de confiance à Paris. Spécialisée dans l'achat, la vente et la location de biens immobiliers haut de gamme. 15+ ans d'expertise, 150+ projets réalisés dans les meilleurs quartiers parisiens.",
+  keywords: [
+    "agence immobilière Paris",
+    "achat immobilier Paris",
+    "vente immobilier Paris",
+    "location immobilier Paris",
+    "biens immobiliers Paris",
+    "immobilier de luxe Paris",
+    "agence immobilière 75008",
+    "Champs-Élysées immobilier",
+    "appartement Paris",
+    "maison Paris",
+    "villa Paris",
+    "hôtel particulier Paris"
+  ],
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: "EB Agency - Agence Immobilière d'Exception à Paris",
+    description: "Votre partenaire de confiance pour vos projets immobiliers à Paris. Achat, vente et location de biens haut de gamme.",
+    type: 'website',
+    url: '/',
+    images: [{
+      url: '/Villa Mougins.jpeg',
+      width: 1200,
+      height: 630,
+      alt: 'Villa de luxe à Paris - EB Agency, agence immobilière spécialisée'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "EB Agency - Agence Immobilière d'Exception à Paris",
+    description: "Votre partenaire de confiance pour vos projets immobiliers à Paris"
+  }
+};
 
 export default function Home() {
   // Images pour les services
@@ -80,7 +118,7 @@ export default function Home() {
                 <span className="block text-accent font-bold">ENGAGÉE</span>
               </h1>
               <p className="text-base md:text-lg text-dark/80 leading-relaxed max-w-lg">
-                Nous accompagnons vos projets immobiliers avec soin et expertise, révélant le meilleur de chaque bien et facilitant chaque étape de votre parcours.
+                Nous accompagnons vos <strong>projets immobiliers</strong> avec <em>soin</em> et <strong>expertise</strong>, révélant le meilleur de chaque bien et facilitant chaque étape de votre <strong>parcours</strong>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/biens" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
@@ -100,10 +138,12 @@ export default function Home() {
                   <div className="aspect-[4/3] bg-gradient-to-br from-accent to-light rounded-2xl overflow-hidden">
                     <Image
                       src="/Villa Mougins.jpeg"
-                      alt="Villa de luxe"
+                      alt="Villa de luxe à vendre à Paris - EB Agency, agence immobilière spécialisée dans l'immobilier haut de gamme"
                       width={300}
                       height={225}
                       className="w-full h-full object-cover"
+                      loading="eager"
+                      priority
                     />
                   </div>
                 </div>
@@ -128,16 +168,17 @@ export default function Home() {
               <div className="w-full h-40 md:h-48 mb-4 md:mb-6 rounded-2xl overflow-hidden">
                 <Image
                   src={serviceImages[0]}
-                  alt="Achat immobilier"
+                  alt="Service d'achat immobilier à Paris - Accompagnement personnalisé pour trouver votre bien idéal avec EB Agency"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-dm-serif text-primary mb-2 md:mb-3 font-bold">Achat</h3>
               <p className="text-sm text-primary/70 mb-3 md:mb-4 font-medium">Votre futur commence ici</p>
               <p className="text-dark/70 mb-4 md:mb-6 text-sm md:text-base">
-                Nous vous aidons à trouver le bien idéal, rapidement et en toute sérénité.
+                Nous vous aidons à trouver le <strong>bien idéal</strong>, rapidement et en toute <em>sérénité</em>.
               </p>
               <ul className="space-y-2 mb-4 md:mb-6">
                 <li className="flex items-center text-sm text-dark/80">
@@ -172,16 +213,17 @@ export default function Home() {
               <div className="w-full h-40 md:h-48 mb-4 md:mb-6 rounded-2xl overflow-hidden">
                 <Image
                   src={serviceImages[1]}
-                  alt="Vente immobilière"
+                  alt="Service de vente immobilière à Paris - Valorisation et mise en vente de votre bien avec EB Agency"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-dm-serif text-primary mb-3 md:mb-4 font-bold">Vente</h3>
               <p className="text-sm text-primary/70 mb-3 md:mb-4 font-medium">Valorisez votre bien</p>
               <p className="text-dark/70 mb-4 md:mb-6 text-sm md:text-base">
-                Mettez toutes les chances de votre côté pour vendre efficacement et au meilleur prix.
+                Mettez toutes les chances de votre côté pour <strong>vendre efficacement</strong> et au <em>meilleur prix</em>.
               </p>
               <ul className="space-y-2 mb-4 md:mb-6">
                 <li className="flex items-center text-sm text-dark/80">
@@ -216,16 +258,17 @@ export default function Home() {
               <div className="w-full h-40 md:h-48 mb-4 md:mb-6 rounded-2xl overflow-hidden">
                 <Image
                   src={serviceImages[2]}
-                  alt="Location immobilière"
+                  alt="Service de location immobilière à Paris - Gestion locative complète avec EB Agency"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-dm-serif text-primary mb-3 md:mb-4 font-bold">Location</h3>
               <p className="text-sm text-primary/70 mb-3 md:mb-4 font-medium">Simplifiez vos projets</p>
               <p className="text-dark/70 mb-4 md:mb-6 text-sm md:text-base">
-                Louez ou faites louer votre bien facilement, avec un accompagnement complet à chaque étape.
+                Louez ou faites louer votre <strong>bien</strong> facilement, avec un <em>accompagnement complet</em> à chaque étape.
               </p>
               <ul className="space-y-2 mb-4 md:mb-6">
                 <li className="flex items-center text-sm text-dark/80">
@@ -265,10 +308,11 @@ export default function Home() {
                 <div className="aspect-video bg-gradient-to-br from-accent to-light rounded-2xl overflow-hidden">
                   <Image
                     src="/Hotel particulier.jpg"
-                    alt="Excellence EB Agency"
+                    alt="Hôtel particulier à Paris - Expertise EB Agency dans l'immobilier de prestige et de luxe"
                     width={600}
                     height={400}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -278,8 +322,8 @@ export default function Home() {
             <div className="space-y-4 md:space-y-6 order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-dm-serif text-primary font-semibold">QUI SOMMES-NOUS ?</h2>
               <p className="text-base md:text-lg text-dark/80 leading-relaxed">
-                EB Agency, c&apos;est une équipe passionnée qui accompagne chaque client comme un partenaire de confiance.
-                À l&apos;écoute de vos besoins, nous vous accompagnons pas à pas pour transformer vos envies en réalité, avec attention et confiance.
+                <strong>EB Agency</strong>, c&apos;est une <strong>équipe passionnée</strong> qui accompagne chaque client comme un <em>partenaire de confiance</em>.
+                À l&apos;écoute de vos besoins, nous vous accompagnons pas à pas pour transformer vos envies en réalité, avec <strong>attention</strong> et <strong>confiance</strong>.
               </p>
 
               <div className="space-y-3 md:space-y-4">
@@ -287,7 +331,7 @@ export default function Home() {
                   <div className="w-5 h-5 md:w-6 md:h-6 bg-primary rounded-full flex-shrink-0 mt-1"></div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1 text-sm md:text-base">Expertise reconnue</h4>
-                    <p className="text-dark/70 text-xs md:text-sm">Plus de 50 projets immobiliers réussis</p>
+                    <p className="text-dark/70 text-xs md:text-sm">Plus de <strong>50 projets immobiliers</strong> réussis</p>
                   </div>
                 </div>
 
@@ -295,7 +339,7 @@ export default function Home() {
                   <div className="w-5 h-5 md:w-6 md:h-6 bg-primary rounded-full flex-shrink-0 mt-1"></div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1 text-sm md:text-base">Approche personnalisée</h4>
-                    <p className="text-dark/70 text-xs md:text-sm">Chaque projet immobilier est unique et adapté à vos besoins</p>
+                    <p className="text-dark/70 text-xs md:text-sm">Chaque <strong>projet immobilier</strong> est unique et adapté à vos <em>besoins</em></p>
                   </div>
                 </div>
 
@@ -303,7 +347,7 @@ export default function Home() {
                   <div className="w-5 h-5 md:w-6 md:h-6 bg-primary rounded-full flex-shrink-0 mt-1"></div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1 text-sm md:text-base">Innovation constante</h4>
-                    <p className="text-dark/70 text-xs md:text-sm">Nous restons à la pointe des dernières tendances immobilières</p>
+                    <p className="text-dark/70 text-xs md:text-sm">Nous restons à la pointe des dernières <strong>tendances immobilières</strong></p>
                   </div>
                 </div>
               </div>
@@ -329,10 +373,11 @@ export default function Home() {
               <div className="aspect-square overflow-hidden">
                 <Image
                   src={portfolioImages[0]}
-                  alt="Hôtel particulier, Paris (France)"
+                  alt="Hôtel particulier à vendre à Paris - Bien immobilier de prestige proposé par EB Agency"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
@@ -347,10 +392,11 @@ export default function Home() {
               <div className="aspect-square overflow-hidden">
                 <Image
                   src={portfolioImages[1]}
-                  alt="Appartement, Paris (France)"
+                  alt="Appartement à vendre à Paris - Sélection de biens immobiliers haut de gamme par EB Agency"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
@@ -365,10 +411,11 @@ export default function Home() {
               <div className="aspect-square overflow-hidden">
                 <Image
                   src={portfolioImages[2]}
-                  alt="Appartement, Paris (France)"
+                  alt="Appartement de luxe à Paris - Portefeuille immobilier exclusif EB Agency dans les meilleurs quartiers"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
@@ -394,8 +441,8 @@ export default function Home() {
             PRÊT À RÉALISER VOTRE PROJET IMMOBILIER ?
           </h2>
           <p className="text-black text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd&apos;hui pour discuter de votre projet immobilier
-            et découvrir comment nous pouvons vous accompagner dans votre parcours.
+            Contactez-nous dès aujourd&apos;hui pour discuter de votre <strong>projet immobilier</strong>
+            et découvrir comment nous pouvons vous accompagner dans votre <strong>parcours</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-secondary text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">

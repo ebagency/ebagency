@@ -39,19 +39,19 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Éditeur du site</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  <strong>Raison sociale :</strong> EB Agency<br />
-                  <strong>Forme juridique :</strong> Société par actions simplifiée (SAS)<br />
-                  <strong>Siège social :</strong> 78 Avenue des Champs-Élysées, 75008 Paris, France<br />
-                  <strong>Capital social :</strong> 50 000 €<br />
-                  <strong>RCS :</strong> Paris B 123 456 789<br />
-                  <strong>SIRET :</strong> 123 456 789 00012<br />
-                  <strong>Code APE :</strong> 7021Z (Conseil en relations publiques et communication)<br />
-                  <strong>TVA intracommunautaire :</strong> FR12 123456789
+                  <strong>Raison sociale :</strong> <strong>EB Agency</strong><br />
+                  <strong>Forme juridique :</strong> <em>Société par actions simplifiée</em> (<abbr title="Société par actions simplifiée"><strong>SAS</strong></abbr>)<br />
+                  <strong>Siège social :</strong> <address className="inline">78 Avenue des Champs-Élysées, 75008 Paris, France</address><br />
+                  <strong>Capital social :</strong> <mark>1 000 €</mark><br />
+                  <strong>RCS :</strong> Paris B <strong>991 612 128</strong><br />
+                  <strong>SIRET :</strong> <strong>991 612 128 00017</strong><br />
+                  <strong>Code APE :</strong> <strong>7021Z</strong> (<em>Conseil en relations publiques et communication</em>)<br />
+                  <strong>TVA intracommunautaire :</strong> <strong>FR44991612128</strong>
                 </p>
                 <p className="text-dark/80 mb-4">
-                  <strong>Directeur de la publication :</strong> Émilie Bernard<br />
-                  <strong>Email :</strong> contact@ebagency.fr<br />
-                  <strong>Téléphone :</strong> 07 78 79 18 25
+                  <strong>Directeur de la publication :</strong> <strong>Émilie Bernard</strong><br />
+                  <strong>Email :</strong> <a href="mailto:contact@ebagency.fr" className="text-primary hover:underline">contact@ebagency.fr</a><br />
+                  <strong>Téléphone :</strong> <a href="tel:+33778791825" className="text-primary hover:underline">07 78 79 18 25</a>
                 </p>
               </div>
             </div>
@@ -61,9 +61,9 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Hébergement</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  <strong>Hébergeur :</strong> Vercel Inc.<br />
-                  <strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis<br />
-                  <strong>Site web :</strong> https://vercel.com
+                  <strong>Hébergeur :</strong> <strong>Vercel Inc.</strong><br />
+                  <strong>Adresse :</strong> <address className="inline">340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</address><br />
+                  <strong>Site web :</strong> <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://vercel.com</a>
                 </p>
               </div>
             </div>
@@ -73,14 +73,14 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Propriété intellectuelle</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  L&apos;ensemble de ce site relève de la législation française et internationale sur le droit d&apos;auteur et la propriété intellectuelle. 
-                  Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+                  L&apos;ensemble de ce <strong>site</strong> relève de la <strong>législation française</strong> et <strong>internationale</strong> sur le <strong>droit d&apos;auteur</strong> et la <strong>propriété intellectuelle</strong>. 
+                  Tous les <strong>droits de reproduction</strong> sont réservés, y compris pour les <em>documents téléchargeables</em> et les <em>représentations iconographiques et photographiques</em>.
                 </p>
                 <p className="text-dark/80 mb-4">
-                  La reproduction de tout ou partie de ce site sur un support électronique quel qu&apos;il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
+                  La reproduction de tout ou partie de ce site sur un <strong>support électronique</strong> quel qu&apos;il soit est <mark>formellement interdite</mark> sauf <strong>autorisation expresse</strong> du directeur de la publication.
                 </p>
                 <p className="text-dark/80">
-                  La marque &quot;EB Agency&quot; et le logo associé sont des marques déposées. Toute reproduction non autorisée de ces marques, dessins et modèles constitue une contrefaçon passible de sanctions pénales.
+                  La marque <strong>&quot;EB Agency&quot;</strong> et le <strong>logo associé</strong> sont des <strong>marques déposées</strong>. Toute reproduction non autorisée de ces marques, dessins et modèles constitue une <mark>contrefaçon passible de sanctions pénales</mark>.
                 </p>
               </div>
             </div>
@@ -90,14 +90,14 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Collecte et traitement des données</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Conformément à la loi &quot;Informatique et Libertés&quot; du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), 
-                  vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression et d&apos;opposition aux données personnelles vous concernant.
+                  Conformément à la loi <strong>&quot;Informatique et Libertés&quot;</strong> du <time dateTime="1978-01-06">6 janvier 1978</time> modifiée et au <strong><abbr title="Règlement Général sur la Protection des Données">RGPD</abbr></strong>, 
+                  vous disposez d&apos;un <strong>droit d&apos;accès</strong>, de <strong>rectification</strong>, de <strong>suppression</strong> et d&apos;<strong>opposition</strong> aux <strong>données personnelles</strong> vous concernant.
                 </p>
                 <p className="text-dark/80 mb-4">
-                  Les données personnelles collectées sur ce site sont destinées à EB Agency et ne seront en aucun cas transmises à des tiers sans votre accord préalable.
+                  Les <strong>données personnelles</strong> collectées sur ce site sont destinées à <strong>EB Agency</strong> et ne seront en aucun cas transmises à des <em>tiers</em> sans votre <strong>accord préalable</strong>.
                 </p>
                 <p className="text-dark/80">
-                  Pour exercer ces droits, vous pouvez nous contacter à l&apos;adresse : contact@ebagency.fr
+                  Pour exercer ces droits, vous pouvez nous contacter à l&apos;adresse : <strong><a href="mailto:contact@ebagency.fr" className="text-primary hover:underline">contact@ebagency.fr</a></strong>
                 </p>
               </div>
             </div>
@@ -107,14 +107,14 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Cookies</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Ce site utilise des cookies pour améliorer votre expérience de navigation et analyser le trafic. 
-                  Les cookies sont de petits fichiers texte stockés sur votre ordinateur qui nous permettent de reconnaître votre navigateur.
+                  Ce <strong>site</strong> utilise des <strong>cookies</strong> pour améliorer votre <em>expérience de navigation</em> et analyser le trafic. 
+                  Les <strong>cookies</strong> sont de <em>petits fichiers texte</em> stockés sur votre ordinateur qui nous permettent de reconnaître votre navigateur.
                 </p>
                 <p className="text-dark/80 mb-4">
-                  Vous pouvez configurer votre navigateur pour refuser les cookies, mais cela peut affecter certaines fonctionnalités du site.
+                  Vous pouvez configurer votre <strong>navigateur</strong> pour refuser les cookies, mais cela peut affecter certaines <em>fonctionnalités du site</em>.
                 </p>
                 <p className="text-dark/80">
-                  En continuant à utiliser ce site, vous acceptez l&apos;utilisation de cookies conformément à notre politique de confidentialité.
+                  En continuant à utiliser ce site, vous acceptez l&apos;utilisation de <strong>cookies</strong> conformément à notre <strong>politique de confidentialité</strong>.
                 </p>
               </div>
             </div>
@@ -124,16 +124,16 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Limitation de responsabilité</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l&apos;année, 
-                  mais peut toutefois contenir des inexactitudes ou des omissions.
+                  Les <strong>informations</strong> contenues sur ce site sont aussi <em>précises que possible</em> et le site remis à jour à différentes périodes de l&apos;année, 
+                  mais peut toutefois contenir des <mark>inexactitudes ou des omissions</mark>.
                 </p>
                 <p className="text-dark/80 mb-4">
-                  Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, 
-                  à l&apos;adresse contact@ebagency.fr, en décrivant le problème de la manière la plus précise possible.
+                  Si vous constatez une <strong>lacune</strong>, <strong>erreur</strong> ou ce qui parait être un <strong>dysfonctionnement</strong>, merci de bien vouloir le signaler par email, 
+                  à l&apos;adresse <strong><a href="mailto:contact@ebagency.fr" className="text-primary hover:underline">contact@ebagency.fr</a></strong>, en décrivant le problème de la manière la plus précise possible.
                 </p>
                 <p className="text-dark/80">
-                  Tout contenu téléchargé se fait aux risques et périls de l&apos;utilisateur et sous sa seule responsabilité. 
-                  En conséquence, ne saurait être tenu responsable d&apos;un quelconque dommage subi par l&apos;ordinateur de l&apos;utilisateur ou d&apos;une quelconque perte de données consécutives au téléchargement.
+                  Tout <strong>contenu téléchargé</strong> se fait aux <mark>risques et périls de l&apos;utilisateur</mark> et sous sa seule responsabilité. 
+                  En conséquence, ne saurait être tenu responsable d&apos;un quelconque <strong>dommage</strong> subi par l&apos;ordinateur de l&apos;utilisateur ou d&apos;une quelconque <strong>perte de données</strong> consécutives au téléchargement.
                 </p>
               </div>
             </div>
@@ -143,10 +143,10 @@ export default function MentionsLegalesPage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Droit applicable</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Le présent site est soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents.
+                  Le présent site est soumis au <strong>droit français</strong>. En cas de <strong>litige</strong>, les <em>tribunaux français</em> seront seuls compétents.
                 </p>
                 <p className="text-dark/80">
-                  Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
+                  <strong>Dernière mise à jour :</strong> <time dateTime={new Date().toISOString()}>{new Date().toLocaleDateString('fr-FR')}</time>
                 </p>
               </div>
             </div>

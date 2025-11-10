@@ -39,14 +39,13 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Introduction</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  EB Agency s&apos;engage à protéger votre vie privée et vos données personnelles. 
-                  Cette politique de confidentialité explique comment nous collectons, utilisons, 
-                  stockons et protégeons vos informations personnelles conformément au Règlement 
-                  Général sur la Protection des Données (RGPD) et à la loi française.
+                  <strong>EB Agency</strong> s&apos;engage à protéger votre <em>vie privée</em> et vos <strong>données personnelles</strong>. 
+                  Cette <strong>politique de confidentialité</strong> explique comment nous collectons, utilisons, 
+                  stockons et protégeons vos informations personnelles conformément au <abbr title="Règlement Général sur la Protection des Données"><strong>RGPD</strong></abbr> et à la <strong>loi française</strong>.
                 </p>
                 <p className="text-dark/80">
-                  En utilisant notre site web ou nos services, vous acceptez les pratiques 
-                  décrites dans cette politique de confidentialité.
+                  En utilisant notre <strong>site web</strong> ou nos <strong>services</strong>, vous acceptez les pratiques 
+                  décrites dans cette <strong>politique de confidentialité</strong>.
                 </p>
               </div>
             </div>
@@ -65,7 +64,7 @@ export default function PolitiqueConfidentialitePage() {
                 </p>
                 <p className="text-dark/80">
                   <strong>Délégué à la Protection des Données (DPO) :</strong><br />
-                  Email : dpo@ebagency.com
+                  Email : contact@ebagency.fr
                 </p>
               </div>
             </div>
@@ -76,17 +75,17 @@ export default function PolitiqueConfidentialitePage() {
               <div className="bg-light p-6 rounded-2xl">
                 <h3 className="text-lg font-semibold text-primary mb-4">Données collectées directement</h3>
                 <ul className="text-dark/80 mb-6 space-y-2">
-                  <li>• <strong>Données d&apos;identification :</strong> nom, prénom, adresse email, numéro de téléphone</li>
-                  <li>• <strong>Données professionnelles :</strong> entreprise, fonction, secteur d&apos;activité</li>
-                  <li>• <strong>Données de contact :</strong> adresse postale, préférences de communication</li>
-                  <li>• <strong>Données de navigation :</strong> pages visitées, durée de visite, source de trafic</li>
+                  <li>• <strong>Données d&apos;identification :</strong> <em>nom, prénom, adresse email, numéro de téléphone</em></li>
+                  <li>• <strong>Données professionnelles :</strong> <em>entreprise, fonction, secteur d&apos;activité</em></li>
+                  <li>• <strong>Données de contact :</strong> <em>adresse postale, préférences de communication</em></li>
+                  <li>• <strong>Données de navigation :</strong> <em>pages visitées, durée de visite, source de trafic</em></li>
                 </ul>
                 
                 <h3 className="text-lg font-semibold text-primary mb-4">Données collectées automatiquement</h3>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Données techniques :</strong> adresse IP, type de navigateur, système d&apos;exploitation</li>
-                  <li>• <strong>Cookies :</strong> cookies de session, cookies analytiques, cookies de préférences</li>
-                  <li>• <strong>Données d&apos;usage :</strong> interactions avec le site, clics, temps passé sur les pages</li>
+                  <li>• <strong>Données techniques :</strong> <em>adresse IP, type de navigateur, système d&apos;exploitation</em></li>
+                  <li>• <strong>Cookies :</strong> <em>cookies de session, cookies analytiques, cookies de préférences</em></li>
+                  <li>• <strong>Données d&apos;usage :</strong> <em>interactions avec le site, clics, temps passé sur les pages</em></li>
                 </ul>
               </div>
             </div>
@@ -95,14 +94,14 @@ export default function PolitiqueConfidentialitePage() {
             <div className="mb-12">
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Finalités du traitement</h2>
               <div className="bg-light p-6 rounded-2xl">
-                <p className="text-dark/80 mb-4">Nous utilisons vos données personnelles pour :</p>
+                <p className="text-dark/80 mb-4">Nous utilisons vos <strong>données personnelles</strong> pour :</p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Gestion des demandes :</strong> répondre à vos questions et demandes d&apos;information</li>
-                  <li>• <strong>Prestations de services :</strong> fournir nos services de communication et design</li>
-                  <li>• <strong>Communication commerciale :</strong> vous envoyer des informations sur nos services (avec votre consentement)</li>
-                  <li>• <strong>Amélioration du site :</strong> analyser l&apos;utilisation du site pour l&apos;améliorer</li>
-                  <li>• <strong>Obligations légales :</strong> respecter nos obligations légales et réglementaires</li>
-                  <li>• <strong>Gestion des litiges :</strong> résoudre d&apos;éventuels litiges</li>
+                  <li>• <strong>Gestion des demandes :</strong> <em>répondre à vos questions et demandes d&apos;information</em></li>
+                  <li>• <strong>Prestations de services :</strong> <em>fournir nos services de communication et design</em></li>
+                  <li>• <strong>Communication commerciale :</strong> <em>vous envoyer des informations sur nos services</em> <mark>(avec votre consentement)</mark></li>
+                  <li>• <strong>Amélioration du site :</strong> <em>analyser l&apos;utilisation du site pour l&apos;améliorer</em></li>
+                  <li>• <strong>Obligations légales :</strong> <em>respecter nos obligations légales et réglementaires</em></li>
+                  <li>• <strong>Gestion des litiges :</strong> <em>résoudre d&apos;éventuels litiges</em></li>
                 </ul>
               </div>
             </div>
@@ -112,10 +111,10 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Base légale du traitement</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Consentement :</strong> pour l&apos;envoi de communications marketing</li>
-                  <li>• <strong>Exécution du contrat :</strong> pour la fourniture de nos services</li>
-                  <li>• <strong>Intérêt légitime :</strong> pour l&apos;amélioration de notre site et services</li>
-                  <li>• <strong>Obligation légale :</strong> pour respecter nos obligations comptables et fiscales</li>
+                  <li>• <strong>Consentement :</strong> <em>pour l&apos;envoi de communications marketing</em></li>
+                  <li>• <strong>Exécution du contrat :</strong> <em>pour la fourniture de nos services</em></li>
+                  <li>• <strong>Intérêt légitime :</strong> <em>pour l&apos;amélioration de notre site et services</em></li>
+                  <li>• <strong>Obligation légale :</strong> <em>pour respecter nos obligations comptables et fiscales</em></li>
                 </ul>
               </div>
             </div>
@@ -124,12 +123,12 @@ export default function PolitiqueConfidentialitePage() {
             <div className="mb-12">
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Conservation des données</h2>
               <div className="bg-light p-6 rounded-2xl">
-                <p className="text-dark/80 mb-4">Nous conservons vos données personnelles pendant :</p>
+                <p className="text-dark/80 mb-4">Nous conservons vos <strong>données personnelles</strong> pendant :</p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Données de contact :</strong> 3 ans après le dernier contact</li>
-                  <li>• <strong>Données clients :</strong> durée de la relation contractuelle + 5 ans</li>
-                  <li>• <strong>Données de navigation :</strong> 13 mois maximum</li>
-                  <li>• <strong>Données comptables :</strong> 10 ans conformément à la législation française</li>
+                  <li>• <strong>Données de contact :</strong> <mark>3 ans</mark> après le dernier contact</li>
+                  <li>• <strong>Données clients :</strong> <mark>durée de la relation contractuelle + 5 ans</mark></li>
+                  <li>• <strong>Données de navigation :</strong> <mark>13 mois maximum</mark></li>
+                  <li>• <strong>Données comptables :</strong> <mark>10 ans</mark> conformément à la <strong>législation française</strong></li>
                 </ul>
               </div>
             </div>
@@ -154,18 +153,18 @@ export default function PolitiqueConfidentialitePage() {
             <div className="mb-12">
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Vos droits</h2>
               <div className="bg-light p-6 rounded-2xl">
-                <p className="text-dark/80 mb-4">Conformément au RGPD, vous disposez des droits suivants :</p>
+                <p className="text-dark/80 mb-4">Conformément au <strong><abbr title="Règlement Général sur la Protection des Données">RGPD</abbr></strong>, vous disposez des <strong>droits suivants</strong> :</p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Droit d&apos;accès :</strong> obtenir une copie de vos données personnelles</li>
-                  <li>• <strong>Droit de rectification :</strong> corriger des données inexactes ou incomplètes</li>
-                  <li>• <strong>Droit à l&apos;effacement :</strong> demander la suppression de vos données</li>
-                  <li>• <strong>Droit à la limitation :</strong> limiter le traitement de vos données</li>
-                  <li>• <strong>Droit à la portabilité :</strong> récupérer vos données dans un format structuré</li>
-                  <li>• <strong>Droit d&apos;opposition :</strong> vous opposer au traitement de vos données</li>
-                  <li>• <strong>Droit de retrait du consentement :</strong> retirer votre consentement à tout moment</li>
+                  <li>• <strong>Droit d&apos;accès :</strong> <em>obtenir une copie de vos données personnelles</em></li>
+                  <li>• <strong>Droit de rectification :</strong> <em>corriger des données inexactes ou incomplètes</em></li>
+                  <li>• <strong>Droit à l&apos;effacement :</strong> <em>demander la suppression de vos données</em></li>
+                  <li>• <strong>Droit à la limitation :</strong> <em>limiter le traitement de vos données</em></li>
+                  <li>• <strong>Droit à la portabilité :</strong> <em>récupérer vos données dans un format structuré</em></li>
+                  <li>• <strong>Droit d&apos;opposition :</strong> <em>vous opposer au traitement de vos données</em></li>
+                  <li>• <strong>Droit de retrait du consentement :</strong> <em>retirer votre consentement à tout moment</em></li>
                 </ul>
                 <p className="text-dark/80 mt-4">
-                  Pour exercer ces droits, contactez-nous à : <strong>dpo@ebagency.com</strong>
+                  Pour exercer ces droits, contactez-nous à : <strong><a href="mailto:contact@ebagency.fr" className="text-primary hover:underline">contact@ebagency.fr</a></strong>
                 </p>
               </div>
             </div>
@@ -175,18 +174,18 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Cookies et technologies similaires</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Notre site utilise des cookies pour améliorer votre expérience de navigation et analyser le trafic.
+                  Notre <strong>site</strong> utilise des <strong>cookies</strong> pour améliorer votre <em>expérience de navigation</em> et analyser le trafic.
                 </p>
                 <h3 className="text-lg font-semibold text-primary mb-4">Types de cookies utilisés :</h3>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• <strong>Cookies essentiels :</strong> nécessaires au fonctionnement du site</li>
-                  <li>• <strong>Cookies analytiques :</strong> pour mesurer l&apos;audience et l&apos;utilisation du site</li>
-                  <li>• <strong>Cookies de préférences :</strong> pour mémoriser vos choix et préférences</li>
-                  <li>• <strong>Cookies marketing :</strong> pour personnaliser les publicités (avec votre consentement)</li>
+                  <li>• <strong>Cookies essentiels :</strong> <em>nécessaires au fonctionnement du site</em></li>
+                  <li>• <strong>Cookies analytiques :</strong> <em>pour mesurer l&apos;audience et l&apos;utilisation du site</em></li>
+                  <li>• <strong>Cookies de préférences :</strong> <em>pour mémoriser vos choix et préférences</em></li>
+                  <li>• <strong>Cookies marketing :</strong> <em>pour personnaliser les publicités</em> <mark>(avec votre consentement)</mark></li>
                 </ul>
                 <p className="text-dark/80 mt-4">
-                  Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur 
-                  ou en nous contactant à : <strong>contact@ebagency.fr</strong>
+                  Vous pouvez gérer vos <strong>préférences de cookies</strong> via les paramètres de votre navigateur 
+                  ou en nous contactant à : <strong><a href="mailto:contact@ebagency.fr" className="text-primary hover:underline">contact@ebagency.fr</a></strong>
                 </p>
               </div>
             </div>
@@ -196,18 +195,18 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Sécurité des données</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Nous mettons en place des mesures techniques et organisationnelles appropriées 
-                  pour protéger vos données personnelles contre :
+                  Nous mettons en place des <strong>mesures techniques et organisationnelles</strong> appropriées 
+                  pour protéger vos <strong>données personnelles</strong> contre :
                 </p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• L&apos;accès non autorisé</li>
-                  <li>• La divulgation non autorisée</li>
-                  <li>• La modification non autorisée</li>
-                  <li>• La destruction non autorisée</li>
+                  <li>• <strong>L&apos;accès non autorisé</strong></li>
+                  <li>• <strong>La divulgation non autorisée</strong></li>
+                  <li>• <strong>La modification non autorisée</strong></li>
+                  <li>• <strong>La destruction non autorisée</strong></li>
                 </ul>
                 <p className="text-dark/80 mt-4">
-                  Ces mesures incluent le chiffrement des données, l&apos;authentification forte, 
-                  la formation du personnel et des audits de sécurité réguliers.
+                  Ces mesures incluent le <strong>chiffrement des données</strong>, l&apos;<strong>authentification forte</strong>, 
+                  la <em>formation du personnel</em> et des <em>audits de sécurité réguliers</em>.
                 </p>
               </div>
             </div>
@@ -236,7 +235,7 @@ export default function PolitiqueConfidentialitePage() {
                   Si vous estimez que vos droits ne sont pas respectés, vous pouvez :
                 </p>
                 <ul className="text-dark/80 space-y-2">
-                  <li>• Nous contacter directement à : <strong>dpo@ebagency.com</strong></li>
+                  <li>• Nous contacter directement à : <strong>contact@ebagency.fr</strong></li>
                   <li>• Introduire une réclamation auprès de la CNIL : <strong>www.cnil.fr</strong></li>
                   <li>• Saisir le tribunal compétent</li>
                 </ul>
@@ -248,11 +247,11 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Modifications de la politique</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Cette politique de confidentialité peut être modifiée à tout moment. 
-                  Toute modification sera publiée sur cette page avec une nouvelle date de mise à jour.
+                  Cette <strong>politique de confidentialité</strong> peut être modifiée à tout moment. 
+                  Toute modification sera publiée sur cette page avec une nouvelle <strong>date de mise à jour</strong>.
                 </p>
                 <p className="text-dark/80">
-                  <strong>Dernière mise à jour :</strong> {new Date().toLocaleDateString('fr-FR')}
+                  <strong>Dernière mise à jour :</strong> <time dateTime={new Date().toISOString()}>{new Date().toLocaleDateString('fr-FR')}</time>
                 </p>
               </div>
             </div>
@@ -262,12 +261,12 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="text-2xl font-dm-serif text-primary mb-6">Contact</h2>
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
-                  Pour toute question concernant cette politique de confidentialité ou vos données personnelles :
+                  Pour toute question concernant cette <strong>politique de confidentialité</strong> ou vos <strong>données personnelles</strong> :
                 </p>
                 <p className="text-dark/80">
-                  <strong>Email :</strong> dpo@ebagency.com<br />
-                  <strong>Téléphone :</strong> 07 78 79 18 25<br />
-                  <strong>Adresse :</strong> 78 Avenue des Champs-Élysées, 75008 Paris, France
+                  <strong>Email :</strong> <a href="mailto:contact@ebagency.fr" className="text-primary hover:underline">contact@ebagency.fr</a><br />
+                  <strong>Téléphone :</strong> <a href="tel:+33778791825" className="text-primary hover:underline">07 78 79 18 25</a><br />
+                  <strong>Adresse :</strong> <address className="inline">78 Avenue des Champs-Élysées, 75008 Paris, France</address>
                 </p>
               </div>
             </div>

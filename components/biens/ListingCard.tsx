@@ -9,19 +9,19 @@ type ListingCardProps = {
 };
 
 export function ListingCard({ listing, className }: ListingCardProps) {
-  const { id, title, images, city, price, status, areaM2, bedrooms, bathrooms, propertyType, available } = listing;
-  const formattedPrice = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(price);
+  const { title, images, city, status, areaM2, bedrooms, bathrooms, propertyType, available } = listing;
 
   return (
     <article className={cn('group relative rounded-md overflow-hidden bg-white border border-black/10 shadow-soft', className)}>
       <div className="relative w-full aspect-[4/3]">
         <Image
           src={images[0]}
-          alt={`${propertyType} à ${city}`}
+          alt={`${title} - ${propertyType} ${status === 'vente' ? 'à vendre' : 'à louer'} à ${city} - ${areaM2}m², ${bedrooms} chambres - EB Agency`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           priority={listing.featured === true}
+          loading={listing.featured ? 'eager' : 'lazy'}
         />
         {!available && (
           <span className="absolute top-3 left-3 bg-dark/80 text-white text-xs uppercase tracking-wide px-2 py-1">Indisponible</span>

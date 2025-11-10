@@ -128,9 +128,9 @@ export default function ServicesPage() {
               <span className="block text-secondary">d&apos;Excellence</span>
             </h1>
             <p className="text-lg md:text-xl text-dark/80 leading-relaxed mb-8">
-              Nous offrons une gamme complète de services de communication de luxe,
-              conçus pour élever votre marque et créer des expériences exceptionnelles
-              qui marquent les esprits.
+              Nous offrons une <strong>gamme complète de services immobiliers</strong>,
+              conçus pour vous accompagner dans vos projets d&apos;<strong>achat</strong>, de <strong>vente</strong> ou de <strong>location</strong>
+              avec <em>expertise</em> et <em>professionnalisme</em>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/qui-sommes-nous" className="bg-secondary block max-w-fit text-white px-6 md:px-8 py-3 md:py-4 font-medium hover:bg-white! border hover:border-secondary! hover:text-black! transition-all hover-lift">
@@ -231,7 +231,7 @@ export default function ServicesPage() {
               Notre Processus
             </h2>
             <p className="text-dark/70 max-w-3xl mx-auto text-lg">
-              Quatre étapes claires pour vous accompagner sereinement dans votre projet
+              Quatre <strong>étapes claires</strong> pour vous accompagner sereinement dans votre <strong>projet immobilier</strong>
             </p>
           </div>
 

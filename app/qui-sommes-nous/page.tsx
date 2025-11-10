@@ -131,10 +131,10 @@ export default function AboutPage() {
                 Qui Sommes-Nous ?
               </h1>
               <p className="text-lg md:text-xl text-dark/80 leading-relaxed mb-8">
-                EB Agency, c&apos;est une équipe passionnée qui accompagne
-                chaque client comme un partenaire de confiance. À l&apos;écoute
+                <strong>EB Agency</strong>, c&apos;est une <strong>équipe passionnée</strong> qui accompagne
+                chaque client comme un <em>partenaire de confiance</em>. À l&apos;écoute
                 de vos besoins, nous vous accompagnons pas à pas pour
-                transformer vos envies en réalité, avec attention et confiance.
+                transformer vos envies en réalité, avec <strong>attention</strong> et <strong>confiance</strong>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -238,8 +238,8 @@ export default function AboutPage() {
               Notre Processus
             </h2>
             <p className="text-lg text-dark/80 max-w-3xl mx-auto">
-              Quatre étapes claires pour vous accompagner sereinement dans votre
-              projet
+              Quatre <strong>étapes claires</strong> pour vous accompagner sereinement dans votre
+              <strong> projet immobilier</strong>
             </p>
           </div>
 
@@ -252,9 +252,8 @@ export default function AboutPage() {
                 Écoute et analyse
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Nous prenons le temps de comprendre vos besoins, vos attentes et
-                vos objectifs pour définir ensemble la meilleure stratégie
-                immobilière.
+                Nous prenons le temps de comprendre vos <strong>besoins</strong>, vos <strong>attentes</strong> et
+                vos <strong>objectifs</strong> pour définir ensemble la meilleure <em>stratégie immobilière</em>.
               </p>
             </div>
 
@@ -266,9 +265,9 @@ export default function AboutPage() {
                 Mise en valeur et promotion
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Nous préparons et mettons en avant votre bien ou recherchons les
-                meilleures options pour votre futur achat/locatif, avec des
-                outils adaptés et une communication efficace.
+                Nous préparons et mettons en avant votre <strong>bien</strong> ou recherchons les
+                meilleures options pour votre futur <strong>achat/locatif</strong>, avec des
+                <em> outils adaptés</em> et une <em>communication efficace</em>.
               </p>
             </div>
 
@@ -280,9 +279,7 @@ export default function AboutPage() {
                 Accompagnement et transactions
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Nous gérons les visites, négociations et toutes les démarches
-                administratives pour assurer une transaction sécurisée et
-                fluide.
+                Nous gérons les <strong>visites</strong>, <strong>négociations</strong> et toutes les <em>démarches administratives</em> pour assurer une <strong>transaction sécurisée</strong> et fluide.
               </p>
             </div>
 
@@ -294,8 +291,8 @@ export default function AboutPage() {
                 Suivi et accompagnement après-vente/location
               </h3>
               <p className="text-dark/70 leading-relaxed">
-                Nous restons à vos côtés même après la transaction pour répondre
-                à vos questions et vous garantir une expérience complète et
+                Nous restons à vos côtés même après la <strong>transaction</strong> pour répondre
+                à vos questions et vous garantir une <em>expérience complète</em> et
                 sereine.
               </p>
             </div>
@@ -311,7 +308,7 @@ export default function AboutPage() {
               Notre Équipe
             </h2>
             <p className="text-lg text-dark/80 max-w-2xl mx-auto">
-            Une équipe de professionnels passionnés et expérimentés, unis par la même volonté de vous accompagner avec soin et attention à chaque étape de votre projet immobilier.
+            Une <strong>équipe de professionnels</strong> passionnés et expérimentés, unis par la même volonté de vous accompagner avec <em>soin</em> et <em>attention</em> à chaque étape de votre <strong>projet immobilier</strong>.
             </p>
           </div>
 

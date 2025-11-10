@@ -1,3 +1,4 @@
+import { Listing } from '@/data/listings';
 import Script from 'next/script';
 
 interface OrganizationData {
@@ -247,7 +248,7 @@ export function LocalBusinessStructuredData() {
 }
 
 // Données structurées pour les biens immobiliers
-export function RealEstateStructuredData({ listings }: { listings: any[] }) {
+export function RealEstateStructuredData({ listings }: { listings: Listing[] }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
