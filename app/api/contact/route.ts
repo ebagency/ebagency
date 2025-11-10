@@ -153,8 +153,5 @@ export async function POST(req: Request) {
     }, { status: 500 });
   }
 
-  console.log('Email envoyé avec succès pour:', data.email);
-
-  const url = new URL('/contact?success=1', req.url);
-  return NextResponse.redirect(url, { status: 303 });
+  return NextResponse.json({ message: `Email envoyé avec succès pour: ${data.email}`}, { status: 200 });
 }
