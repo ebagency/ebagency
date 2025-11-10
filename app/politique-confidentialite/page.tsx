@@ -56,8 +56,8 @@ export default function PolitiqueConfidentialitePage() {
               <div className="bg-light p-6 rounded-2xl">
                 <p className="text-dark/80 mb-4">
                   <strong>EB Agency</strong><br />
-                  SAS au capital de 50 000 €<br />
-                  RCS Paris B 123 456 789<br />
+                  SAS au capital de 1 000 €<br />
+                  <strong>RCS :</strong> Paris B <strong>991 612 128</strong><br />
                   Siège social : 78 Avenue des Champs-Élysées, 75008 Paris, France<br />
                   Email : contact@ebagency.fr<br />
                   Téléphone : 07 78 79 18 25
