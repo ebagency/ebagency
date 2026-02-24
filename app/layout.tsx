@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "@/styles/globals.css";
-import { Navbar, Footer } from "@/components";
+import { PublicLayout } from "@/components/layout/PublicLayout";
 import { Analytics } from "@/components/seo";
 
 const montserrat = Montserrat({
@@ -103,12 +103,12 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} antialiased`}
       >
-        <Analytics 
+        <Analytics
           googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID}
         />
-        <Navbar />
-        {children}
-        <Footer />
+        <PublicLayout>
+          {children}
+        </PublicLayout>
       </body>
     </html>
   );
