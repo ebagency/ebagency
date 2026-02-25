@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
 
 function validate(body: Record<string, unknown>) {
   const errors: string[] = [];
@@ -142,14 +143,30 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, errors }, { status: 400 });
   }
 
+  // Stocker le message en base de données
+  try {
+    await prisma.contactMessage.create({
+      data: {
+        name: data.name,
+        email: data.email,
+        phone: data.phone || null,
+        company: data.company || null,
+        service: data.service || null,
+        message: data.message,
+      },
+    });
+  } catch (dbError) {
+    console.error('Erreur stockage BDD:', dbError);
+  }
+
   // Envoi de l'email avec Nodemailer
   const emailResult = await sendEmail(data);
-  
+
   if (!emailResult.success) {
     console.error('Erreur envoi email:', emailResult.error);
-    return NextResponse.json({ 
-      ok: false, 
-      errors: ['Erreur lors de l\'envoi du message. Veuillez réessayer.'] 
+    return NextResponse.json({
+      ok: false,
+      errors: ['Erreur lors de l\'envoi du message. Veuillez réessayer.']
     }, { status: 500 });
   }
 
