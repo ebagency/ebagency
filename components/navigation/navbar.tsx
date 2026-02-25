@@ -22,7 +22,7 @@ export const Navbar = () => {
           <LinkButton href="/biens">Biens</LinkButton>
           <LinkButton href="/qui-sommes-nous">à Propos</LinkButton>
           <LinkButton href="/services">Services</LinkButton>
-          
+          <LinkButton href="/blog">Blog</LinkButton>
         </div>
         <Link href="/contact" className='bg-primary text-white px-4 py-2 uppercase font-light'>Contact</Link>
       </nav>
@@ -50,7 +50,7 @@ export const Navbar = () => {
           <LinkButton href="/biens" className="py-2" onClick={() => setIsOpen(false)} >Biens</LinkButton>
           <LinkButton href="/qui-sommes-nous" className="py-2" onClick={() => setIsOpen(false)} >à Propos</LinkButton>
           <LinkButton href="/services" className="py-2" onClick={() => setIsOpen(false)} >Services</LinkButton>
-          
+          <LinkButton href="/blog" className="py-2" onClick={() => setIsOpen(false)} >Blog</LinkButton>
         </div>
         <Link href="/contact" className='bg-primary text-white mt-8 px-4 py-2 uppercase font-light' onClick={() => setIsOpen(false)} >Contact</Link>
       </aside>

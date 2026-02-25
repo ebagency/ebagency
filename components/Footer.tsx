@@ -50,6 +50,9 @@ export function Footer() {
               <li className="hover:text-white transition-colors cursor-pointer">
                 <Link href="/qui-sommes-nous#equipe">Équipe</Link>
               </li>
+              <li className="hover:text-white transition-colors cursor-pointer">
+                <Link href="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
 
