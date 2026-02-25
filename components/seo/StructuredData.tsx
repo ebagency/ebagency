@@ -1,4 +1,4 @@
-import { Listing } from '@/data/listings';
+import type { Listing } from '@/app/generated/prisma';
 import Script from 'next/script';
 
 interface OrganizationData {
@@ -261,7 +261,7 @@ export function RealEstateStructuredData({ listings }: { listings: Listing[] }) 
         '@type': 'RealEstateListing',
         name: listing.title,
         description: listing.description,
-        url: `https://www.ebagency.fr/biens#${listing.id}`,
+        url: `https://www.ebagency.fr/biens#${listing.slug}`,
         image: listing.images?.[0],
         address: {
           '@type': 'PostalAddress',

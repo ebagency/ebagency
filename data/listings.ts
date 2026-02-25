@@ -1,3 +1,9 @@
+/**
+ * @deprecated Ce fichier est conservé comme référence.
+ * Les données sont désormais gérées via Prisma (PostgreSQL).
+ * Utiliser `import { prisma } from '@/lib/prisma'` pour accéder aux listings.
+ * Le type Listing est maintenant importé depuis `@/app/generated/prisma`.
+ */
 export type Listing = {
   id: string;
   title: string;

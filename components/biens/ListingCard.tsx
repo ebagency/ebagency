@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Listing } from '@/data/listings';
 import { cn } from '@/utils';
+import type { Listing } from '@/app/generated/prisma';
+import { propertyTypeLabels, getStatusBadge } from '@/lib/listing-utils';
 
 type ListingCardProps = {
   listing: Listing;
@@ -9,24 +10,26 @@ type ListingCardProps = {
 };
 
 export function ListingCard({ listing, className }: ListingCardProps) {
-  const { title, images, city, status, areaM2, bedrooms, bathrooms, propertyType, available } = listing;
+  const { title, images, city, status, areaM2, bedrooms, bathrooms, propertyType, available, featured } = listing;
 
   return (
     <article className={cn('group relative rounded-md overflow-hidden bg-white border border-black/10 shadow-soft', className)}>
       <div className="relative w-full aspect-[4/3]">
         <Image
-          src={images[0]}
-          alt={`${title} - ${propertyType} ${status === 'vente' ? 'à vendre' : 'à louer'} à ${city} - ${areaM2}m², ${bedrooms} chambres - EB Agency`}
+          src={images[0] || '/placeholder.jpg'}
+          alt={`${title} - ${propertyTypeLabels[propertyType]} ${getStatusBadge(status)} à ${city} - ${areaM2}m², ${bedrooms} chambres - EB Agency`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          priority={listing.featured === true}
-          loading={listing.featured ? 'eager' : 'lazy'}
+          priority={featured}
+          loading={featured ? 'eager' : 'lazy'}
         />
         {!available && (
           <span className="absolute top-3 left-3 bg-dark/80 text-white text-xs uppercase tracking-wide px-2 py-1">Indisponible</span>
         )}
-        <span className="absolute top-3 right-3 bg-primary text-white text-xs uppercase tracking-wide px-2 py-1">{status === 'vente' ? 'À vendre' : 'À louer'}</span>
+        <span className="absolute top-3 right-3 bg-primary text-white text-xs uppercase tracking-wide px-2 py-1">
+          {getStatusBadge(status)}
+        </span>
       </div>
 
       <div className="p-4 text-dark">
@@ -36,14 +39,12 @@ export function ListingCard({ listing, className }: ListingCardProps) {
           <span>{areaM2} m²</span>
           <span>• {bedrooms} ch</span>
           <span>• {bathrooms} sdb</span>
-          <span>• {propertyType}</span>
+          <span>• {propertyTypeLabels[propertyType]}</span>
         </div>
         <div className="mt-4 flex items-center justify-between">
-          <Link href={`/contact`} className="text-sm text-primary underline underline-offset-4 hover:opacity-80">Contactez-nous</Link>
+          <Link href="/contact" className="text-sm text-primary underline underline-offset-4 hover:opacity-80">Contactez-nous</Link>
         </div>
       </div>
     </article>
   );
 }
-
-

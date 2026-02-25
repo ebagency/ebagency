@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { listings } from '@/data/listings';
+import { prisma } from '@/lib/prisma';
 import { ListingCard } from '@/components/biens/ListingCard';
 import { Filters } from '@/components/biens/Filters';
 import { RealEstateStructuredData } from '@/components/seo/StructuredData';
+import { ListingStatus, PropertyType, Prisma } from '@/app/generated/prisma';
 
 export const metadata: Metadata = {
   title: 'Biens Immobiliers Paris - EB Agency | Achat Vente Location',
@@ -33,77 +34,78 @@ export const metadata: Metadata = {
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 
-function toNumber(value: string | undefined, fallback = 0) {
-  if (!value) return fallback;
-  const n = Number(value);
-  return Number.isFinite(n) ? n : fallback;
-}
+const statusMap: Record<string, ListingStatus> = {
+  vente: ListingStatus.VENTE,
+  location: ListingStatus.LOCATION,
+};
 
-function applyFilters(sp: Record<string, string>, pageSize: number) {
-  const { status, propertyType, city, priceMin, priceMax, bedrooms, areaMin, available, sort, page } = sp;
+const propertyTypeMap: Record<string, PropertyType> = {
+  appartement: PropertyType.APPARTEMENT,
+  maison: PropertyType.MAISON,
+  villa: PropertyType.VILLA,
+};
 
-  let result = listings.slice();
-
-  if (status === 'vente' || status === 'location') {
-    result = result.filter(l => l.status === status);
-  }
-  if (propertyType === 'appartement' || propertyType === 'maison' || propertyType === 'villa') {
-    result = result.filter(l => l.propertyType === propertyType);
-  }
-  if (city) {
-    result = result.filter(l => l.city === city);
-  }
-  if (priceMin) {
-    const min = toNumber(priceMin, 0);
-    result = result.filter(l => l.price >= min);
-  }
-  if (priceMax) {
-    const max = toNumber(priceMax, Number.MAX_SAFE_INTEGER);
-    result = result.filter(l => l.price <= max);
-  }
-  if (bedrooms) {
-    const br = toNumber(bedrooms, 0);
-    result = result.filter(l => l.bedrooms >= br);
-  }
-  if (areaMin) {
-    const a = toNumber(areaMin, 0);
-    result = result.filter(l => l.areaM2 >= a);
-  }
-  if (available === 'on') {
-    result = result.filter(l => l.available);
-  }
-
-  switch (sort) {
-    case 'prix_asc':
-      result.sort((a, b) => a.price - b.price);
-      break;
-    case 'prix_desc':
-      result.sort((a, b) => b.price - a.price);
-      break;
-    case 'surface_desc':
-      result.sort((a, b) => b.areaM2 - a.areaM2);
-      break;
-    default:
-      // recent: featured first then by id for stability
-      result.sort((a, b) => Number(b.featured === true) - Number(a.featured === true));
-  }
-
-  const currentPage = Math.max(1, toNumber(page, 1));
-  const total = result.length;
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
-  const start = (currentPage - 1) * pageSize;
-  const end = start + pageSize;
-  const pageItems = result.slice(start, end);
-  return { total, totalPages, currentPage, items: pageItems };
-}
+const sortMap: Record<string, Prisma.ListingOrderByWithRelationInput> = {
+  prix_asc: { price: 'asc' },
+  prix_desc: { price: 'desc' },
+  surface_desc: { areaM2: 'desc' },
+};
 
 export default async function BiensPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const resolvedSearchParams = await searchParams;
-  const sp = Object.fromEntries(Object.entries(resolvedSearchParams).map(([k, v]) => [k, Array.isArray(v) ? v[0] : v]).filter(([v]) => v !== undefined)) as Record<string, string>;
-  const uniqueCities = Array.from(new Set(listings.map(l => l.city))).sort();
+  const sp = Object.fromEntries(
+    Object.entries(resolvedSearchParams)
+      .map(([k, v]) => [k, Array.isArray(v) ? v[0] : v])
+      .filter(([, v]) => v !== undefined)
+  ) as Record<string, string>;
 
   const pageSize = 9;
-  const { items, total, totalPages, currentPage } = applyFilters(sp, pageSize);
+  const currentPage = Math.max(1, Number(sp.page) || 1);
+
+  // Build Prisma where clause
+  const where: Prisma.ListingWhereInput = {};
+
+  if (sp.status && statusMap[sp.status]) {
+    where.status = statusMap[sp.status];
+  }
+  if (sp.propertyType && propertyTypeMap[sp.propertyType]) {
+    where.propertyType = propertyTypeMap[sp.propertyType];
+  }
+  if (sp.city) {
+    where.city = sp.city;
+  }
+  if (sp.priceMin) {
+    where.price = { ...((where.price as object) || {}), gte: Number(sp.priceMin) };
+  }
+  if (sp.priceMax) {
+    where.price = { ...((where.price as object) || {}), lte: Number(sp.priceMax) };
+  }
+  if (sp.bedrooms) {
+    where.bedrooms = { gte: Number(sp.bedrooms) };
+  }
+  if (sp.areaMin) {
+    where.areaM2 = { gte: Number(sp.areaMin) };
+  }
+  if (sp.available === 'on') {
+    where.available = true;
+  }
+
+  const orderBy: Prisma.ListingOrderByWithRelationInput =
+    sortMap[sp.sort] || { featured: 'desc' };
+
+  const [items, total, allListings] = await Promise.all([
+    prisma.listing.findMany({
+      where,
+      orderBy,
+      skip: (currentPage - 1) * pageSize,
+      take: pageSize,
+    }),
+    prisma.listing.count({ where }),
+    prisma.listing.findMany({ select: { city: true } }),
+  ]);
+
+  const uniqueCities = Array.from(new Set(allListings.map((l) => l.city))).sort();
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -111,9 +113,9 @@ export default async function BiensPage({ searchParams }: { searchParams: Promis
     itemListElement: items.map((l, idx) => ({
       '@type': 'ListItem',
       position: (currentPage - 1) * pageSize + idx + 1,
-      url: `https://www.ebagency.fr/biens#${l.id}`,
-      name: l.title
-    }))
+      url: `https://www.ebagency.fr/biens#${l.slug}`,
+      name: l.title,
+    })),
   };
 
   return (
@@ -129,12 +131,22 @@ export default async function BiensPage({ searchParams }: { searchParams: Promis
 
         <Filters
           cities={uniqueCities}
-          initial={{ status: sp.status, propertyType: sp.propertyType, city: sp.city, priceMin: sp.priceMin, priceMax: sp.priceMax, bedrooms: sp.bedrooms, areaMin: sp.areaMin, available: sp.available, sort: sp.sort }}
+          initial={{
+            status: sp.status,
+            propertyType: sp.propertyType,
+            city: sp.city,
+            priceMin: sp.priceMin,
+            priceMax: sp.priceMax,
+            bedrooms: sp.bedrooms,
+            areaMin: sp.areaMin,
+            available: sp.available,
+            sort: sp.sort,
+          }}
         />
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((listing) => (
-            <div key={listing.id} id={listing.id}>
+            <div key={listing.id} id={listing.slug}>
               <ListingCard listing={listing} />
             </div>
           ))}
@@ -152,7 +164,11 @@ export default async function BiensPage({ searchParams }: { searchParams: Promis
               params.set('page', String(p));
               const active = p === currentPage;
               return (
-                <Link key={p} href={`/biens?${params.toString()}`} className={`px-3 py-1 border text-sm ${active ? 'bg-primary text-white border-primary' : 'border-dark/30 text-dark hover:bg-light'}`}>
+                <Link
+                  key={p}
+                  href={`/biens?${params.toString()}`}
+                  className={`px-3 py-1 border text-sm ${active ? 'bg-primary text-white border-primary' : 'border-dark/30 text-dark hover:bg-light'}`}
+                >
                   {p}
                 </Link>
               );
