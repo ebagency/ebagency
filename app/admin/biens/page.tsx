@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { AdminTable } from '@/components/admin/AdminTable';
+import { AdminBadge } from '@/components/admin/AdminBadge';
+import { ConfirmDialog } from '@/components/admin/ConfirmDialog';
 import { FiPlus, FiEdit, FiTrash2 } from 'react-icons/fi';
 
 interface Listing {
@@ -21,58 +23,6 @@ interface Listing {
   available: boolean;
   featured?: boolean;
   description: string;
-}
-
-function AdminBadge({ children, variant = 'default' }: { children: React.ReactNode; variant?: 'default' | 'success' | 'warning' | 'danger' }) {
-  const colors: Record<string, string> = {
-    default: 'bg-gray-100 text-gray-700',
-    success: 'bg-green-100 text-green-700',
-    warning: 'bg-yellow-100 text-yellow-700',
-    danger: 'bg-red-100 text-red-700',
-  };
-  return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors[variant]}`}>
-      {children}
-    </span>
-  );
-}
-
-function ConfirmDialog({
-  open,
-  title,
-  message,
-  onConfirm,
-  onCancel,
-}: {
-  open: boolean;
-  title: string;
-  message: string;
-  onConfirm: () => void;
-  onCancel: () => void;
-}) {
-  if (!open) return null;
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-white rounded-xl shadow-lg p-6 max-w-sm w-full mx-4">
-        <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">{title}</h3>
-        <p className="text-sm text-gray-600 mb-6">{message}</p>
-        <div className="flex justify-end gap-3">
-          <button
-            onClick={onCancel}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
-          >
-            Annuler
-          </button>
-          <button
-            onClick={onConfirm}
-            className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-lg hover:bg-red-600 transition"
-          >
-            Supprimer
-          </button>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 const priceFormatter = new Intl.NumberFormat('fr-FR', {
@@ -245,7 +195,8 @@ export default function AdminBiensPage() {
           title="Confirmer la suppression"
           message="Etes-vous sur de vouloir supprimer ce bien ? Cette action est irreversible."
           onConfirm={handleDelete}
-          onCancel={() => setDeleteId(null)}
+          onClose={() => setDeleteId(null)}
+          confirmLabel="Supprimer"
         />
       </main>
     </div>
